@@ -94,10 +94,15 @@ local function build(div)
     ))
   end
 
+  -- Everything else the author wrote on the div rides along as a data
+  -- attribute, so the audio layer can be configured from markdown alone.
   local attrs = { ["data-prayer-id"] = prayer_id }
   if speech then attrs["data-speech-lang"] = speech end
   for k, val in pairs(div.attributes) do
-    if k ~= "lang" and k ~= "speech" then attrs[k] = val end
+    if k ~= "lang" and k ~= "speech" then
+      if k:sub(1, 5) ~= "data-" then k = "data-" .. k end
+      attrs[k] = val
+    end
   end
 
   local classes = pandoc.List({ "prayer" })

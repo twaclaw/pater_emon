@@ -42,8 +42,56 @@ needs **Settings → Pages → Source** set to **GitHub Actions**.
 3. Lines marked `{.tr}` attach to the line above as its transliteration. A
    block with no `.tr` lines gets no toggle button.
 
+That is all a new language needs. The `speech` tag gives it a Listen button
+and line-by-line highlighting; see [Audio](#audio) to attach a recording
+instead.
+
 [assets/prayer.lua](assets/prayer.lua) turns that block into one `.verse` div
 per petition, each with a stable id, so text can be addressed a line at a time.
+
+## Audio
+
+Every prayer block gets a **Listen** button that reads the text and highlights
+each line as it is spoken. Two engines sit behind that one button
+([assets/js/audio.js](assets/js/audio.js)):
+
+| Engine | Used when | Highlighting |
+|---|---|---|
+| `SpeechEngine` | the block has `speech="xx-XX"` and the device has a voice for it | exact — one utterance per verse, plus word-level from `boundary` events |
+| `FileEngine` | the block has `audio="..."` | needs a `cues` list; without one the recording just plays |
+
+Speech synthesis is the extensible path: a new chapter gets audio and
+synchronised highlighting from its `speech` attribute alone, with no timings
+to measure and nothing to keep in step, because each verse is spoken as its
+own utterance.
+
+### Adding audio
+
+A recording is declared on the prayer block, as one or more `Label=path`
+pairs separated by `;`. Paths are relative to the site root.
+
+```markdown
+::: {.prayer lang="la" speech="la" #la-missal
+     audio="Read aloud=assets/audio/pater-noster-spoken.mp3;
+            Gregorian chant=assets/audio/pater-noster-chant.mp3"
+     audio-credit="Reading by Geremia (public domain)."}
+```
+
+More than one source puts a picker next to the button. To make a recording
+follow the text, add `cues` — the start time in seconds of each verse, one
+list per track in the same order as `audio`, tracks separated by `;`:
+
+```markdown
+     cues="0,3.12,5.75,7.64,10.22,14.69,16.92,18.72,19.10; "
+```
+
+The trailing `;` above leaves the second track without cues. Neither of the
+bundled recordings has a measured cue list yet, so neither is highlighted
+line by line — the timings have to be listened to and written down, which is
+the one part of this that no attribute can do for you.
+
+Recordings live in [assets/audio/](assets/audio/) with their provenance in
+[assets/audio/CREDITS.md](assets/audio/CREDITS.md).
 
 ## Licence
 

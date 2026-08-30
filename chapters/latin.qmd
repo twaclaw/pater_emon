@@ -9,7 +9,7 @@ language in this book.
 
 The liturgical text, used in the Mass and the Liturgy of the Hours.
 
-::: {.prayer lang="la" speech="la" #la-missal}
+::: {.prayer lang="la" speech="la" #la-missal audio="Read aloud=assets/audio/pater-noster-spoken.mp3; Gregorian chant=assets/audio/pater-noster-chant.mp3" audio-credit="Recordings from Wikimedia Commons: reading by Geremia (public domain); chant by <a href='https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg'>Schola Gregoriana</a> (CC BY-SA 3.0)."}
 | Pater noster, qui es in cælis:
 | sanctificétur nomen tuum;
 | advéniat regnum tuum;
@@ -24,6 +24,11 @@ The liturgical text, used in the Mass and the Liturgy of the Hours.
 The acute accents are not classical: they are the Missal's stress marks,
 printed to tell a reader which syllable to lean on when chanting. Before the
 1962 edition, *cotidianum* was spelled *quotidianum*.
+
+Latin is the one chapter with real recordings rather than a synthetic voice —
+no browser ships a Latin voice, and the language has been sung for long enough
+that a recording is the better witness anyway. The **Listen** button offers a
+plain reading and the Gregorian setting; both come from Wikimedia Commons.
 
 ## Vulgata Clementina
 

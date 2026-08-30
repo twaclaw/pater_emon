@@ -44,8 +44,12 @@
     });
   }
 
+  /* audio.js may already have put a control bar above this block; share it
+     rather than stacking a second one. */
   function controlsFor(block) {
-    var bar = document.createElement("div");
+    var bar = block.previousElementSibling;
+    if (bar && bar.classList.contains("prayer-controls")) return bar;
+    bar = document.createElement("div");
     bar.className = "prayer-controls";
     block.parentNode.insertBefore(bar, block);
     return bar;

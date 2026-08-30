@@ -3,6 +3,7 @@ project:
   output-dir: _book
   resources:
     - assets/js/**
+    - assets/audio/**
 
 book:
   title: "The Lord's Prayer"

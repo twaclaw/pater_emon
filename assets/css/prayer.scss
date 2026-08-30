@@ -81,6 +81,67 @@ $font-size-root: 17px !default;
   color: #fff;
 }
 
+.prayer-play,
+.prayer-stop {
+  @extend .prayer-toggle;
+}
+
+.prayer-play[aria-pressed="true"] {
+  background: var(--bs-primary, #2c6e9b);
+  border-color: var(--bs-primary, #2c6e9b);
+  color: #fff;
+}
+
+.prayer-source {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(127, 127, 127, 0.45);
+  background: transparent;
+  color: inherit;
+}
+
+/* Its own row under the buttons, so a long attribution does not push the
+   transliteration toggle off the end of the bar. */
+.prayer-credit {
+  flex-basis: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+/* ---------- playback highlighting ---------- */
+
+.prayer.is-sounding {
+  border-left-color: #c8862c;
+}
+
+.prayer .verse.is-speaking {
+  background: rgba(200, 134, 44, 0.16);
+  box-shadow: inset 3px 0 0 #c8862c;
+}
+
+.prayer .verse.is-speaking .verse-tr {
+  opacity: 0.95;
+}
+
+.word-speaking {
+  border-bottom: 2px solid #c8862c;
+  font-weight: 600;
+}
+
+/* A recording with no cue list cannot say which line it is on, so the whole
+   block is marked instead of a single verse. */
+.prayer.no-cues.is-sounding {
+  background: rgba(200, 134, 44, 0.09);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prayer .verse { transition: none; }
+}
+
 /* ---------- variant texts ---------- */
 
 .variant {

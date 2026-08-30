@@ -54,6 +54,26 @@ a table of the prayer's parts rather than as one continuous block.
 **Line breaks.** Where an article runs the prayer as continuous prose, it has
 been broken into lines at the petitions. The words are unchanged.
 
+## Audio
+
+Both recordings are from Wikimedia Commons, converted to mono 22.05 kHz MP3
+and peak-normalised; the audio is otherwise unedited.
+
+| Recording | Author | Licence |
+|---|---|---|
+| [Pater noster.ogg](https://commons.wikimedia.org/wiki/File:Pater_noster.ogg) — spoken | Geremia | Public domain |
+| [Schola Gregoriana-Pater Noster.ogg](https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg) — chant | Schola Gregoriana | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
+
+Commons has no recording of this prayer in Spanish, Lithuanian or either form
+of Greek, so those chapters are read by the voice installed on your own
+device. MIDI files of *Pater noster* and *Vater unser* do exist on Commons,
+but MIDI stores notes rather than words — it can carry the chant's melody and
+never the text — so it is no use for reading a prayer aloud.
+
+Neither recording has a verified cue list, so neither follows the text line by
+line yet. Measured timings can be added without touching any code; the format
+is documented in the [README](https://github.com/dsandovalv/lords_prayer#adding-audio).
+
 ## Reuse
 
 This book is CC BY-SA 4.0, the same licence as the source articles.
