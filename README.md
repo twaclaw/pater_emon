@@ -1,8 +1,10 @@
 # The Lord's Prayer
 
-A Quarto book presenting the Lord's Prayer in six languages — Spanish,
-Lithuanian, English, Ancient Greek, Modern Greek and Latin — one language per
-chapter, with the texts taken from Wikipedia.
+A Quarto book presenting the Lord's Prayer in eight languages — Ancient Greek,
+Modern Greek, Latin, Lithuanian, Spanish, Italian, German and English — one
+language per chapter, with the texts taken from Wikipedia. The order is the
+order of descent: the Koine original, then Modern Greek and Latin, then the
+vernaculars that took the prayer on from the Latin.
 
 The Greek chapters print a transliteration in the Latin alphabet beneath each
 line, which a button hides. The preference is remembered across chapters and
@@ -27,6 +29,9 @@ Pushing to `main` renders the book and deploys it to GitHub Pages via
 needs **Settings → Pages → Source** set to **GitHub Actions**.
 
 ## Adding a language
+
+See [CLAUDE.md](CLAUDE.md) for the full procedure and the editorial rules.
+In short:
 
 1. Add `chapters/<language>.qmd` and list it under `book.chapters` in
    [_quarto.yml](_quarto.yml).

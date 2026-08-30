@@ -9,12 +9,14 @@ those same articles.
 
 | Chapter | Article |
 |---|---|
-| Spanish | [Padrenuestro](https://es.wikipedia.org/wiki/Padrenuestro) (Spanish Wikipedia) |
-| Lithuanian | [Tėve mūsų](https://lt.wikipedia.org/wiki/T%C4%97ve_m%C5%ABs%C5%B3) (Lithuanian Wikipedia) |
-| English | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
 | Ancient Greek | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
 | Modern Greek | [Κυριακή προσευχή](https://el.wikipedia.org/wiki/%CE%9A%CF%85%CF%81%CE%B9%CE%B1%CE%BA%CE%AE_%CF%80%CF%81%CE%BF%CF%83%CE%B5%CF%85%CF%87%CE%AE) (Greek Wikipedia) |
 | Latin | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
+| Lithuanian | [Tėve mūsų](https://lt.wikipedia.org/wiki/T%C4%97ve_m%C5%ABs%C5%B3) (Lithuanian Wikipedia) |
+| Spanish | [Padrenuestro](https://es.wikipedia.org/wiki/Padrenuestro) (Spanish Wikipedia) |
+| Italian | [Padre nostro](https://it.wikipedia.org/wiki/Padre_nostro) (Italian Wikipedia) |
+| German | [Vaterunser](https://de.wikipedia.org/wiki/Vaterunser) (German Wikipedia) |
+| English | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
 
 ## Editorial notes
 
@@ -46,6 +48,19 @@ verbatim for both the NA28 and the Patriarchal 1904 texts. The two differ
 slightly in how they mark accents, because the article transliterates them in
 two separate sections; that inconsistency is preserved rather than smoothed
 over.
+
+**German ecumenical text.** The *Vaterunser* article describes the 1968
+ecumenical text rather than printing it, saying it matches the 1984 Luther
+Bible word for word apart from the inverted address *Vater unser*. The text
+given here is quoted verbatim from a different German Wikipedia article,
+[Prägermanisch](https://de.wikipedia.org/wiki/Pr%C3%A4germanisch), which
+prints it in full as its modern-German reference text; it agrees with every
+detail the *Vaterunser* article specifies.
+
+**Italian pre-2020 wording.** The chapter quotes the older sixth petition,
+*e non ci indurre in tentazione*, from the Italian article's own footnote on
+what the 2020 Missal changed. Only the 2020 and Waldensian texts are given as
+full prayer blocks, both verbatim.
 
 **Spanish liturgical text.** Assembled from the wording the Spanish article
 gives for the current liturgical form, which the article presents split across

@@ -7,7 +7,7 @@ project:
 
 book:
   title: "The Lord's Prayer"
-  subtitle: "One prayer, six tongues"
+  subtitle: "One prayer, eight tongues"
   date: last-modified
   search: true
   reader-mode: true
@@ -19,12 +19,15 @@ book:
     collapse-level: 1
   chapters:
     - index.qmd
-    - chapters/spanish.qmd
-    - chapters/lithuanian.qmd
-    - chapters/english.qmd
+    # Source languages first, then the vernaculars they were carried into.
     - chapters/ancient-greek.qmd
     - chapters/modern-greek.qmd
     - chapters/latin.qmd
+    - chapters/lithuanian.qmd
+    - chapters/spanish.qmd
+    - chapters/italian.qmd
+    - chapters/german.qmd
+    - chapters/english.qmd
     - chapters/sources.qmd
 
 filters:

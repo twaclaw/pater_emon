@@ -1,0 +1,83 @@
+# Italian {#sec-italian}
+
+*Padre nostro.* Italian sits closer to the Latin of the
+[Latin chapter](latin.qmd) than any other language here, and the prayer shows
+it — *rimetti a noi i nostri debiti* is *dimitte nobis debita nostra* with the
+endings worn down. It is also the language in which the sixth petition was
+most publicly argued over, and the only one in this book whose official text
+changed in living memory.
+
+## Catholic liturgical text
+
+The translation in the third edition of the Italian Missal, in use since
+29 November 2020.
+
+::: {.prayer lang="it" speech="it-IT" #it-cei}
+| Padre nostro, che sei nei cieli,
+| sia santificato il tuo nome,
+| venga il tuo regno,
+| sia fatta la tua volontà, come in cielo così in terra.
+| Dacci oggi il nostro pane quotidiano,
+| e rimetti a noi i nostri debiti
+| come anche noi li rimettiamo ai nostri debitori,
+| e non abbandonarci alla tentazione,
+| ma liberaci dal male.
+:::
+
+## The sentence that changed
+
+For most of the twentieth century Italians prayed *e non ci indurre in
+tentazione* — "and lead us not into temptation", the sixth petition as the
+Latin has it and as English still has it. The 2008 CEI translation of Matthew
+replaced it, and in 2020 the new Missal carried the change into the Mass
+itself:
+
+> *e non ci indurre in tentazione* → *e non abbandonarci alla tentazione*
+
+"Do not abandon us to temptation". The objection it answers is old and blunt:
+the older wording seems to make God the one doing the leading. The same
+edition added a single word to the fifth petition, *come **anche** noi li
+rimettiamo* — "as we **too** forgive" — and the Latin *editio typica* was
+never touched at all.
+
+Italy was not alone. France made the same move in 2017, and the reasoning is
+the one behind the Lithuanian Catholic *neleisk mūsų gundyti*
+([Lithuanian](lithuanian.qmd)) and the demotic Greek *να μην επιτρέψεις να
+υποκύψουμε* ([Modern Greek](modern-greek.qmd)). Three languages, three
+different centuries, one uncomfortable verb.
+
+## Waldensian text
+
+The version used by the Chiesa evangelica valdese, Italy's oldest Protestant
+church.
+
+::: {.prayer lang="it" speech="it-IT" #it-valdese .variant}
+| Padre nostro, che sei nei cieli,
+| sia santificato il tuo nome,
+| venga il tuo regno,
+| sia fatta la tua volontà, come in cielo anche in terra.
+| Dacci oggi il nostro pane necessario,
+| e rimetti a noi i nostri debiti,
+| come anche noi li rimettiamo ai nostri debitori
+| e non esporci alla tentazione,
+| ma liberaci dal Male.
+| Tuo è il Regno, la potenza e la gloria nei secoli dei secoli.
+| Amen.
+:::
+
+Four differences from the Catholic text, and each one is a decision. *Anche in
+terra* rather than *così in terra*. *Pane necessario* — "necessary bread" —
+where the Catholic text keeps *quotidiano*, a rendering of ἐπιούσιον that
+sides with the [Modern Greek](modern-greek.qmd) reading over Jerome's. *Non
+esporci alla tentazione*, "do not expose us to temptation", a third answer to
+the same problem. And *dal Male* capitalised: the Evil One, not evil, the
+distinction the *Nova Vulgata* makes in [Latin](latin.qmd).
+
+The doxology is there too, as it is in Protestant usage generally and absent
+from the Catholic text, which reaches it only after the embolism.
+
+## Amen
+
+Italian Catholics do not say *Amen* at the end of the Lord's Prayer at Mass —
+the prayer runs straight into the embolism, and the *Amen* belongs to the
+doxology that follows it.

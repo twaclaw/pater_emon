@@ -2,7 +2,7 @@
 
 ::: {.pdf-keep}
 The Lord's Prayer is the one text that most of Christendom says in its own
-language while believing it is saying the same thing. This book sets six of
+language while believing it is saying the same thing. This book sets eight of
 those languages side by side, one to a chapter: the address to the Father, the
 three wishes, the four requests.
 
@@ -12,9 +12,12 @@ are in the web edition; what follows here is the prayers themselves.
 :::
 
 The Lord's Prayer is the one text that most of Christendom says in its own
-language while believing it is saying the same thing. This book sets six of
+language while believing it is saying the same thing. This book sets eight of
 those languages side by side, one to a chapter, so the shared skeleton is easy
 to see: the address to the Father, the three wishes, the four requests.
+
+The order is the order of descent: the Koine original, then Modern Greek and
+Latin, then the vernaculars that took the prayer on from the Latin.
 
 Each chapter gives the text as Wikipedia records it, the tradition it comes
 from, and — where the script is not Latin — a transliteration printed under
@@ -58,15 +61,17 @@ Gregorian setting. A recording carries no idea of where one line ends and the
 next begins, so it plays without following the text line by line until someone
 measures the timings.
 
-## The six chapters
+## The eight chapters
 
 | Chapter | Text |
 |---|---|
-| [Spanish](chapters/spanish.qmd) | Scío / Reina-Valera, with the liturgical variant |
-| [Lithuanian](chapters/lithuanian.qmd) | Catholic and Orthodox forms |
-| [English](chapters/english.qmd) | BCP 1662, traditional ecumenical, ELLC 1988 |
 | [Ancient Greek](chapters/ancient-greek.qmd) | The Koine original, NA28 and Patriarchal 1904 |
 | [Modern Greek](chapters/modern-greek.qmd) | The demotic rendering |
 | [Latin](chapters/latin.qmd) | Roman Missal and Vulgata Clementina |
+| [Lithuanian](chapters/lithuanian.qmd) | Catholic and Orthodox forms |
+| [Spanish](chapters/spanish.qmd) | Scío / Reina-Valera, with the liturgical variant |
+| [Italian](chapters/italian.qmd) | The 2020 Missal and the Waldensian text |
+| [German](chapters/german.qmd) | Ecumenical 1968, Luther, Einheitsübersetzung |
+| [English](chapters/english.qmd) | BCP 1662, traditional ecumenical, ELLC 1988 |
 
 Full provenance for every text is in [Sources](chapters/sources.qmd).

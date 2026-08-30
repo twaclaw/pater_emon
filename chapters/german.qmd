@@ -1,0 +1,98 @@
+# German {#sec-german}
+
+*Vaterunser* — one word, in German, which is a fair summary of what the
+language does to everything. Alongside the Ten Commandments and the Creed it
+counts as *Grundwissen des Christen*, the basic furniture of a Christian
+education, and unusually for a language with a Reformation running through the
+middle of it, Catholics and Protestants say the same words.
+
+## Ecumenical text
+
+Agreed by the Arbeitsgemeinschaft für liturgische Texte in 1968 and used
+across the confessions since.
+
+::: {.prayer lang="de" speech="de-DE" #de-oekumenisch}
+| Vater unser im Himmel,
+| geheiligt werde dein Name.
+| Dein Reich komme.
+| Dein Wille geschehe,
+| wie im Himmel, so auf Erden.
+| Unser tägliches Brot gib uns heute.
+| Und vergib uns unsere Schuld,
+| wie auch wir vergeben unsern Schuldigern.
+| Und führe uns nicht in Versuchung,
+| sondern erlöse uns von dem Bösen.
+| Denn dein ist das Reich und die Kraft
+| und die Herrlichkeit in Ewigkeit.
+| Amen.
+:::
+
+The 1968 text is Luther's, almost to the word — what changed was the address.
+Luther wrote *Unser Vater im Himmel*, ordinary German word order; the
+ecumenical text inverts it to *Vater unser*, which is not German word order at
+all but a calque of the Latin *Pater noster*. The one thing the confessions
+settled on was the archaism.
+
+The rest of the 1968 revision is a list of small modernisations against older
+Catholic and Lutheran forms: *im Himmel* for *der du bist im Himmel*,
+*geheiligt* for *geheiliget*, *Dein Reich komme* for *zu uns komme Dein
+Reich*, *unser tägliches Brot* for *unser täglich Brot*, *von dem Bösen* for
+*von dem Übel*.
+
+## Lutherbibel
+
+Matthew 6:9–13 in the Luther Bible, revised most recently in 2017.
+
+::: {.prayer lang="de" speech="de-DE" #de-luther .variant}
+| Unser Vater im Himmel!
+| Dein Name werde geheiligt.
+| Dein Reich komme.
+| Dein Wille geschehe wie im Himmel so auf Erden.
+| Unser tägliches Brot gib uns heute.
+| Und vergib uns unsere Schuld,
+| wie auch wir vergeben unsern Schuldigern.
+| Und führe uns nicht in Versuchung,
+| sondern erlöse uns von dem Bösen.
+| [Denn dein ist das Reich und die Kraft und die Herrlichkeit in Ewigkeit. Amen.]
+:::
+
+The brackets around the doxology are the Bible's own: it is printed, but
+marked as absent from the oldest manuscripts — the same editorial judgement
+the [English](english.qmd) chapter describes, made visible on the page.
+
+## Einheitsübersetzung
+
+The revised Catholic translation of 2016.
+
+::: {.prayer lang="de" speech="de-DE" #de-einheit .variant}
+| Unser Vater im Himmel, geheiligt werde dein Name,
+| dein Reich komme,
+| dein Wille geschehe wie im Himmel, so auf der Erde.
+| Gib uns heute das Brot, das wir brauchen!
+| Und erlass uns unsere Schulden,
+| wie auch wir sie unseren Schuldnern erlassen haben!
+| Und führe uns nicht in Versuchung,
+| sondern rette uns vor dem Bösen!
+:::
+
+*Das Brot, das wir brauchen* — "the bread we need" — abandons *täglich*
+entirely and translates the sense of ἐπιούσιον rather than a guess at the
+word, landing where the Waldensian *pane necessario* in [Italian](italian.qmd)
+lands. *Erlass uns unsere Schulden* restores the accountancy that *Schuld* had
+softened: *Schuld* is guilt as much as debt, *Schulden* are debts you owe.
+And *rette uns vor dem Bösen*, "rescue us from the Evil One", is more urgent
+than *erlöse*, "redeem".
+
+## Schuld
+
+German has the same ambiguity Greek and Latin have, only more so. *Schuld* is
+debt and guilt at once — the word is in *Schuldner*, a debtor, and in
+*schuldig*, guilty — so *vergib uns unsere Schuld* is untroubled by the choice
+that forced Spanish to pick *ofensas* over *deudas* and English to pick
+*trespasses* over *debts*. German did not have to choose. The word already
+meant both.
+
+Note also what German does not do with the sixth petition. *Führe uns nicht in
+Versuchung* is the literal reading, kept in all three texts above, at a time
+when [Italian](italian.qmd), French, Lithuanian and demotic Greek were all
+finding ways around it.

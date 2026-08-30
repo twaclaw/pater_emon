@@ -45,7 +45,8 @@ The Lithuanian Orthodox text is identical except in the sixth petition:
 Where the Catholic form asks God *neleisk mūsų gundyti* — "do not allow us to
 be tempted" — the Orthodox form keeps the blunter reading of the Greek,
 *nevesk mūsų į pagundą*, "lead us not into temptation". This is the same
-argument that produced the 2017 revision of the prayer in French and Italian.
+argument that produced the 2017 revision of the prayer in French and the 2020
+revision in [Italian](italian.qmd).
 
 Before the *Amen*, an Orthodox priest adds the doxology: *nes tavo yra
 karalystė ir galybė, ir garbė per amžius. Amen.*
