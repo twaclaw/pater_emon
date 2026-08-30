@@ -1,0 +1,43 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+    - assets/js/**
+
+book:
+  title: "The Lord's Prayer"
+  subtitle: "One prayer, six tongues"
+  date: last-modified
+  search: true
+  reader-mode: true
+  page-footer:
+    left: "Texts from Wikipedia, reused under CC BY-SA 4.0"
+    right: "Built with [Quarto](https://quarto.org)"
+  sidebar:
+    style: docked
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - chapters/spanish.qmd
+    - chapters/lithuanian.qmd
+    - chapters/english.qmd
+    - chapters/ancient-greek.qmd
+    - chapters/modern-greek.qmd
+    - chapters/latin.qmd
+    - chapters/sources.qmd
+
+filters:
+  - assets/prayer.lua
+
+format:
+  html:
+    theme:
+      light: [cosmo, assets/css/prayer.scss]
+      dark: [darkly, assets/css/prayer.scss]
+    include-in-header:
+      - assets/include-head.html
+    include-after-body:
+      - assets/include-body.html
+    toc: true
+    toc-depth: 3
+    lang: en

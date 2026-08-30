@@ -1,0 +1,51 @@
+# Lithuanian {#sec-lithuanian}
+
+*Tėve mūsų* — literally "Father our", in that order, which is how Lithuanian
+has said it for as long as it has been written down. The prayer has a small
+claim on the history of the language: the first phrase of *Tėve mūsų* is one of
+the earliest snippets of Lithuanian to appear in a printed comparative work,
+the *Europa Polyglotta* map of 1741, which gives the opening of the Lord's
+Prayer in thirty-three European languages.
+
+## Catholic text
+
+::: {.prayer lang="lt" speech="lt-LT" #lt-catholic}
+| Tėve mūsų, kuris esi danguje,
+| teesie šventas Tavo vardas,
+| teateinie Tavo karalystė,
+| teesie Tavo valia
+| kaip danguje, taip ir žemėje.
+| Kasdienės mūsų duonos duok mums šiandien
+| ir atleisk mums mūsų kaltes,
+| kaip ir mes atleidžiame savo kaltininkams.
+| Ir neleisk mūsų gundyti,
+| bet gelbėk mus nuo pikto. Amen.
+:::
+
+The optative forms *teesie* and *teateinie* — "let it be", "let it come" — are
+archaic and survive in Lithuanian mainly here, in the prayer itself.
+
+## Orthodox text
+
+The Lithuanian Orthodox text is identical except in the sixth petition:
+
+::: {.prayer lang="lt" speech="lt-LT" #lt-orthodox .variant}
+| Tėve mūsų, kuris esi danguje,
+| teesie šventas Tavo vardas,
+| teateinie Tavo karalystė,
+| teesie Tavo valia
+| kaip danguje, taip ir žemėje.
+| Kasdienės mūsų duonos duok mums šiandien
+| ir atleisk mums mūsų kaltes,
+| kaip ir mes atleidžiame savo kaltininkams.
+| Ir nevesk mūsų į pagundą,
+| bet gelbėk mus nuo pikto. Amen.
+:::
+
+Where the Catholic form asks God *neleisk mūsų gundyti* — "do not allow us to
+be tempted" — the Orthodox form keeps the blunter reading of the Greek,
+*nevesk mūsų į pagundą*, "lead us not into temptation". This is the same
+argument that produced the 2017 revision of the prayer in French and Italian.
+
+Before the *Amen*, an Orthodox priest adds the doxology: *nes tavo yra
+karalystė ir galybė, ir garbė per amžius. Amen.*

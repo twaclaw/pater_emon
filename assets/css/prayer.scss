@@ -1,0 +1,94 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "EB Garamond", Georgia, "Times New Roman", serif !default;
+$headings-font-family: "EB Garamond", Georgia, serif !default;
+$font-size-root: 17px !default;
+
+/*-- scss:rules --*/
+
+/* ---------- the prayer block ---------- */
+
+.prayer {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--bs-primary, #2c6e9b);
+  background: rgba(127, 127, 127, 0.06);
+  border-radius: 0 6px 6px 0;
+}
+
+.prayer .verse {
+  padding: 0.2rem 0.45rem;
+  margin: 0 -0.45rem;
+  border-radius: 4px;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.prayer .verse-text {
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+}
+
+.prayer .verse-tr {
+  display: block;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  opacity: 0.72;
+  font-style: italic;
+  padding-bottom: 0.15rem;
+}
+
+/* Hidden by the toggle. Kept in the DOM so the audio layer can still
+   address it, and so search/copy behaviour stays predictable. */
+.prayer.tr-hidden .verse-tr {
+  display: none;
+}
+
+/* ---------- the toggle ---------- */
+
+.prayer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1.5rem 0 -0.75rem;
+}
+
+.prayer-toggle {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(127, 127, 127, 0.45);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.prayer-toggle:hover {
+  background: rgba(127, 127, 127, 0.14);
+  border-color: rgba(127, 127, 127, 0.7);
+}
+
+.prayer-toggle[aria-pressed="true"] {
+  background: var(--bs-primary, #2c6e9b);
+  border-color: var(--bs-primary, #2c6e9b);
+  color: #fff;
+}
+
+/* ---------- variant texts ---------- */
+
+.variant {
+  font-size: 0.95rem;
+}
+
+.gloss {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

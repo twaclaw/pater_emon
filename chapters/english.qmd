@@ -1,0 +1,84 @@
+# English {#sec-english}
+
+English translations of the prayer begin around AD 650 with a Northumbrian
+version, and there have been many since. Three are in current liturgical use,
+and all three are given here. All are based on Matthew rather than Luke.
+
+## Book of Common Prayer, 1662
+
+The version that shaped English prose, still used by the Church of England.
+
+::: {.prayer lang="en" speech="en-GB" #en-bcp}
+| Our Father, which art in heaven,
+| Hallowed be thy Name;
+| Thy kingdom come;
+| Thy will be done
+| in earth, as it is in heaven:
+| Give us this day our daily bread;
+| And forgive us our trespasses,
+| as we forgive them that trespass against us;
+| And lead us not into temptation,
+| But deliver us from evil;
+| For thine is the kingdom,
+| the power, and the glory,
+| For ever and ever.
+| Amen.
+:::
+
+Note *which art*, not *who art*, and *in earth*, not *on earth* — both are
+1662 readings that the traditional version below quietly modernised.
+
+## Traditional ecumenical version
+
+The lightly modernised form used across Catholic and many Protestant churches.
+
+::: {.prayer lang="en" speech="en-GB" #en-traditional .variant}
+| Our Father, who art in heaven,
+| hallowed be thy name;
+| thy kingdom come,
+| thy will be done
+| on earth as it is in heaven.
+| Give us this day our daily bread,
+| and forgive us our trespasses,
+| as we forgive those who trespass against us;
+| and lead us not into temptation,
+| but deliver us from evil.
+:::
+
+Most Protestants close with the doxology: *For thine is the kingdom, the power,
+and the glory, for ever and ever. Amen.* At Mass in the Catholic Church the
+embolism is followed instead by: *For the kingdom, the power and the glory are
+yours, now and for ever.*
+
+## English Language Liturgical Consultation, 1988
+
+The modern ecumenical translation, and the one that departs furthest from the
+familiar wording.
+
+::: {.prayer lang="en" speech="en-GB" #en-ellc .variant}
+| Our Father in heaven,
+| hallowed be your name,
+| your kingdom come,
+| your will be done,
+| on earth as in heaven.
+| Give us today our daily bread.
+| Forgive us our sins
+| as we forgive those who sin against us.
+| Save us from the time of trial
+| and deliver us from evil.
+| For the kingdom, the power, and the glory are yours
+| now and for ever. Amen.
+:::
+
+*Save us from the time of trial* is the ELLC's answer to the sixth petition,
+avoiding the implication that God does the leading. *Sins* replaces
+*trespasses*, moving back toward the Greek *ὀφειλήματα*.
+
+## On the doxology
+
+*For thine is the kingdom, the power, and the glory* is not in the oldest
+manuscripts and is not considered part of Matthew's text. The translators of
+the 1611 King James Bible believed the Greek manuscript they had was ancient
+and took it in; its use in English dates from at least the 1549 First Prayer
+Book of Edward VI, influenced by Tyndale's 1526 New Testament. The Latin
+liturgical tradition never attached it to the prayer at all.

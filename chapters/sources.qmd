@@ -1,0 +1,59 @@
+# Sources {#sec-sources .unnumbered}
+
+Every prayer text in this book is taken from Wikipedia and is reused under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The
+commentary around the texts is written for this book, from the material in
+those same articles.
+
+## Articles
+
+| Chapter | Article |
+|---|---|
+| Spanish | [Padrenuestro](https://es.wikipedia.org/wiki/Padrenuestro) (Spanish Wikipedia) |
+| Lithuanian | [Tėve mūsų](https://lt.wikipedia.org/wiki/T%C4%97ve_m%C5%ABs%C5%B3) (Lithuanian Wikipedia) |
+| English | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
+| Ancient Greek | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
+| Modern Greek | [Κυριακή προσευχή](https://el.wikipedia.org/wiki/%CE%9A%CF%85%CF%81%CE%B9%CE%B1%CE%BA%CE%AE_%CF%80%CF%81%CE%BF%CF%83%CE%B5%CF%85%CF%87%CE%AE) (Greek Wikipedia) |
+| Latin | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
+
+## Editorial notes
+
+The texts are reproduced as the articles give them, with these exceptions.
+
+**Modern Greek.** The Greek Wikipedia prints its demotic translation in
+polytonic orthography with the translator's glosses in parentheses inside the
+lines. It appears here in monotonic orthography with the glosses removed, and
+with three forms normalised to standard modern spelling — *ἐπιτρέψῃς* →
+επιτρέψεις, *ὑποκύψωμε* → υποκύψουμε, *δύναμι* → δύναμη. The article's own
+text, for reference:
+
+> Οὐράνιε πατέρα μας, νὰ δοξάζεται τὸ ὄνομά σου, νὰ ἔρχεται ἡ βασιλεία σου (νὰ
+> βασιλεύῃς σὲ μᾶς, νὰ κυβερνᾷς τὴ ζωή μας), νὰ γίνεται τὸ θέλημά σου, ὅπως
+> στὸν οὐρανό, ἔτσι καὶ στὴ γῆ· τὸ ψωμί μας τὸ ἀναγκαῖο γιὰ τὴ ζωὴ δῶσε μας
+> σήμερα καὶ χάρισέ μας τὰ χρέη μας (τὰ ἁμαρτήματά μας), ὅπως καὶ ἐμεῖς
+> χαρίζουμε στοὺς χρεῶστες μας (σ᾽ ὅσους ἁμάρτησαν σὲ μᾶς). Καὶ νὰ μὴν
+> ἐπιτρέψῃς νὰ ὑποκύψωμε σὲ πειρασμό, ἀλλὰ γλύτωσέ μας ἀπὸ τὸν Πονηρό. Διότι
+> δική σου (καὶ ὄχι τοῦ Πονηροῦ) εἶναι ἡ βασιλικὴ ἐξουσία καὶ ἡ δύναμι καὶ ἡ
+> ἰσχὺς στοὺς αἰῶνες. Ἀμήν.
+
+**Modern Greek transliteration.** Written for this book. The Greek Wikipedia
+article does not romanise its text, and no standard romanisation targets Modern
+Greek *pronunciation* rather than spelling. The scheme used is set out in the
+pronunciation key in that chapter.
+
+**Ancient Greek transliteration.** Wikipedia's own, taken from the article
+verbatim for both the NA28 and the Patriarchal 1904 texts. The two differ
+slightly in how they mark accents, because the article transliterates them in
+two separate sections; that inconsistency is preserved rather than smoothed
+over.
+
+**Spanish liturgical text.** Assembled from the wording the Spanish article
+gives for the current liturgical form, which the article presents split across
+a table of the prayer's parts rather than as one continuous block.
+
+**Line breaks.** Where an article runs the prayer as continuous prose, it has
+been broken into lines at the petitions. The words are unchanged.
+
+## Reuse
+
+This book is CC BY-SA 4.0, the same licence as the source articles.

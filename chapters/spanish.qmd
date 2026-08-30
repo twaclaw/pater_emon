@@ -1,0 +1,54 @@
+# Spanish {#sec-spanish}
+
+*Padrenuestro* — also called the *oración dominical*, the prayer of the Lord.
+Spanish inherited the prayer through the Latin of the Vulgate, and the biblical
+wording below is the point where the Catholic and Protestant traditions in
+Spanish happen to agree almost word for word: it is common to Felipe Scío de
+San Miguel's 1793 translation of the Vulgate and to the Reina-Valera.
+
+## The text
+
+::: {.prayer lang="es" speech="es-ES" #es-biblical}
+| Padre nuestro, que estás en los cielos,
+| santificado sea tu Nombre;
+| venga a nosotros tu reino;
+| hágase tu voluntad así en la tierra como en el cielo.
+| El pan nuestro de cada día dánosle hoy;
+| y perdónanos nuestras deudas
+| como también nosotros perdonamos a nuestros deudores;
+| y no nos dejes caer en la tentación,
+| mas líbranos del mal.
+:::
+
+Reina-Valera renders the fifth line as *danos hoy nuestro pan cotidiano*.
+
+## The liturgical variant
+
+The form said aloud at Mass differs from the biblical text in one theologically
+loaded place. Where the Greek has *ὀφειλήματα* and the Latin *debita* —
+**debts** — the Spanish liturgy says **ofensas**, offences:
+
+::: {.prayer lang="es" speech="es-ES" #es-liturgical .variant}
+| Padre nuestro, que estás en el cielo,
+| santificado sea tu Nombre;
+| venga a nosotros tu reino;
+| hágase tu voluntad en la tierra como en el cielo.
+| Danos hoy nuestro pan de cada día;
+| perdona nuestras ofensas,
+| como también nosotros perdonamos a los que nos ofenden;
+| no nos dejes caer en la tentación,
+| y líbranos del mal.
+| Amén.
+:::
+
+Spanish is not alone in this: Portuguese, Galician and French all made the same
+substitution, while English, Italian and German kept the debt. The Spanish
+Wikipedia article treats the swap as a real change of meaning rather than a
+stylistic one — a debt is something owed and quantifiable, an offence is
+something felt.
+
+## Note on the doxology
+
+Spanish Catholic practice does not attach *porque tuyo es el reino* to the end
+of the prayer; at Mass it comes back after the priest's embolism. Protestant
+usage generally does attach it.

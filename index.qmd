@@ -1,0 +1,44 @@
+# Preface {.unnumbered}
+
+The Lord's Prayer is the one text that most of Christendom says in its own
+language while believing it is saying the same thing. This book sets six of
+those languages side by side, one to a chapter, so the shared skeleton is easy
+to see: the address to the Father, the three wishes, the four requests.
+
+Each chapter gives the text as Wikipedia records it, the tradition it comes
+from, and — where the script is not Latin — a transliteration printed under
+each line.
+
+## Reading the Greek chapters
+
+The two Greek chapters print a transliteration in the Latin alphabet beneath
+each line of Greek:
+
+::: {.prayer lang="grc" speech="el-GR" #demo}
+| Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
+| [Páter hēmôn ho en toîs ouranoîs]{.tr}
+:::
+
+The **Hide transliteration** button above the text removes those lines. The
+choice is remembered across chapters and across visits, so you can read the
+Greek unaided once you no longer need the crutch.
+
+The two Greek chapters transliterate to different targets, and it is worth
+knowing which you are looking at. The Ancient Greek chapter uses Wikipedia's
+scholarly romanisation, which encodes the *spelling* — vowel length, breathings,
+pitch accents. The Modern Greek chapter transliterates the *sound* of the text
+as it is spoken in Greece today. The same written word therefore comes out
+differently in the two chapters, which is the point.
+
+## The six chapters
+
+| Chapter | Text |
+|---|---|
+| [Spanish](chapters/spanish.qmd) | Scío / Reina-Valera, with the liturgical variant |
+| [Lithuanian](chapters/lithuanian.qmd) | Catholic and Orthodox forms |
+| [English](chapters/english.qmd) | BCP 1662, traditional ecumenical, ELLC 1988 |
+| [Ancient Greek](chapters/ancient-greek.qmd) | The Koine original, NA28 and Patriarchal 1904 |
+| [Modern Greek](chapters/modern-greek.qmd) | The demotic rendering |
+| [Latin](chapters/latin.qmd) | Roman Missal and Vulgata Clementina |
+
+Full provenance for every text is in [Sources](chapters/sources.qmd).

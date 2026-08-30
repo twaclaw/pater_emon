@@ -1,0 +1,86 @@
+# Modern Greek {#sec-modern-greek}
+
+Greek is the only language in this book where the original and the translation
+are the *same language*, two thousand years apart. A Greek speaker today can
+read the Koine of the [Ancient Greek chapter](ancient-greek.qmd) and follow
+most of it, the way an English speaker follows Chaucer — which is why the
+Church never needed to replace it, and why the demotic rendering below is a
+study aid rather than a liturgical text. In church, the 1904 Patriarchal text
+is still what is said.
+
+The transliteration here does something different from the one in the Ancient
+Greek chapter. That one romanises the spelling; this one romanises the
+**sound**, as the text is spoken in Greece today.
+
+::: {.callout-note collapse="true"}
+## Pronunciation key
+
+| Letter | Here | Sounds like |
+|---|---|---|
+| β | `v` | *v*an |
+| γ | `gh` / `y` | soft throaty *g* before a, o, u; *y*es before e, i |
+| δ | `dh` | *th*is |
+| θ | `th` | *th*in |
+| χ | `ch` | Scottish lo*ch* |
+| ξ, ψ | `x`, `ps` | — |
+| η, ι, υ, ει, οι | `i` | mach*i*ne |
+| αι | `e` | b*e*d |
+| ου | `ou` | s*ou*p |
+| μπ, ντ, γκ | `b`, `d`, `g` | — |
+
+The great sound change of Greek is *iotacism*: five separate ancient vowels and
+diphthongs all collapsed into a single `i`. It is the reason the Modern Greek
+transliteration looks so much flatter than the Ancient one.
+:::
+
+## The text
+
+::: {.prayer lang="el" speech="el-GR" #el-demotic}
+| Ουράνιε πατέρα μας,
+| [Ouránie patéra mas,]{.tr}
+| να δοξάζεται το όνομά σου,
+| [na dhoxázete to ónomá sou,]{.tr}
+| να έρχεται η βασιλεία σου,
+| [na érchete i vasilía sou,]{.tr}
+| να γίνεται το θέλημά σου, όπως στον ουρανό, έτσι και στη γη.
+| [na yínete to thélimá sou, ópos ston ouranó, étsi ke sti yi.]{.tr}
+| Το ψωμί μας το αναγκαίο για τη ζωή δώσε μας σήμερα
+| [To psomí mas to anangéo ya ti zoí dhóse mas símera]{.tr}
+| και χάρισέ μας τα χρέη μας, όπως και εμείς χαρίζουμε στους χρεώστες μας.
+| [ke chárisé mas ta chréi mas, ópos ke emís charízoume stous chreóstes mas.]{.tr}
+| Και να μην επιτρέψεις να υποκύψουμε σε πειρασμό,
+| [Ke na min epitrépsis na ipokípsoume se pirazmó,]{.tr}
+| αλλά γλύτωσέ μας από τον Πονηρό.
+| [allá ghlítosé mas apó ton Poniró.]{.tr}
+| Διότι δική σου είναι η βασιλική εξουσία
+| [Dhióti dhikí sou íne i vasilikí exousía]{.tr}
+| και η δύναμη και η ισχύς στους αιώνες. Αμήν.
+| [ke i dhínami ke i ischís stous eónes. Amín.]{.tr}
+:::
+
+::: {.callout-note appearance="simple"}
+The Greek Wikipedia prints this text in polytonic orthography, with the
+translator's explanatory glosses set in parentheses inside the lines. It is
+given here in the monotonic orthography that has been standard since 1982,
+with the glosses removed and three forms normalised to their standard modern
+spelling: *ἐπιτρέψῃς* → **επιτρέψεις**, *ὑποκύψωμε* → **υποκύψουμε**,
+*δύναμι* → **δύναμη**. Wording is otherwise untouched. The source text is in
+[Sources](sources.qmd).
+:::
+
+## What the demotic changes
+
+The translation is not only modernising vocabulary; it is taking positions.
+
+*Το ψωμί μας το αναγκαίο για τη ζωή* — "our bread necessary for life" — is an
+open interpretation of ἐπιούσιον, choosing the reading "needed for existence"
+over "for today".
+
+*Να μην επιτρέψεις να υποκύψουμε σε πειρασμό* — "do not allow us to succumb to
+temptation" — softens the sixth petition in exactly the way the Lithuanian
+Catholic text does, and the way Pope Francis asked for in 2017.
+
+And the address changes register entirely. *Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς*, a
+vocative with a definite article, becomes *Ουράνιε πατέρα μας* — "our heavenly
+father", plain and unremarkable modern Greek. Two thousand years of the same
+language, and the hardest thing to carry across is the first line.

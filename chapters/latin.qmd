@@ -1,0 +1,66 @@
+# Latin {#sec-latin}
+
+*Pater Noster.* For most of European history this was the Lord's Prayer — not
+one version among several but the text itself, memorised by people who spoke no
+Latin, and the vehicle through which the prayer reached every western European
+language in this book.
+
+## Roman Missal
+
+The liturgical text, used in the Mass and the Liturgy of the Hours.
+
+::: {.prayer lang="la" speech="la" #la-missal}
+| Pater noster, qui es in cælis:
+| sanctificétur nomen tuum;
+| advéniat regnum tuum;
+| fiat volúntas tua, sicut in cælo, et in terra.
+| Panem nostrum cotidiánum da nobis hódie;
+| et dimítte nobis débita nostra,
+| sicut et nos dimíttimus debitóribus nostris;
+| et ne nos indúcas in tentatiónem;
+| sed líbera nos a malo.
+:::
+
+The acute accents are not classical: they are the Missal's stress marks,
+printed to tell a reader which syllable to lean on when chanting. Before the
+1962 edition, *cotidianum* was spelled *quotidianum*.
+
+## Vulgata Clementina
+
+Jerome's text as fixed by the Sixto-Clementine edition of 1592.
+
+::: {.prayer lang="la" speech="la" #la-vulgate .variant}
+| pater noster qui es in cælis
+| sanctificetur nomen tuum
+| adveniat regnum tuum
+| fiat voluntas tua sicut in cælo et in terra
+| panem nostrum supersubstantialem da nobis hodie
+| et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris
+| et ne nos inducas in tentationem sed libera nos a malo
+:::
+
+The one substantive difference is in the fifth line. The Missal has
+*cotidianum*, "daily"; the Vulgate has **supersubstantialem**, Jerome's
+literal attempt at the untranslatable Greek ἐπιούσιον — "super-substantial",
+bread beyond substance. Jerome used it in Matthew and *quotidianum* in Luke,
+for the same Greek word, and the liturgy followed Luke.
+
+In the *Nova Vulgata*, the official Latin Bible of the Catholic Church, the
+last word is capitalised — *a Malo* — indicating the Evil One rather than
+abstract evil.
+
+## Editorial variants
+
+The four editions of the Vulgate differ here only in small ways. The Clementine
+has *ne nos inducas* where the *Nova Vulgata* has *ne inducas nos*. The
+Stuttgart Vulgate reads *qui in caelis es* for *qui es in caelis*, *veniat* for
+*adveniat*, *dimisimus* for *dimittimus*, and *temptationem* for *tentationem*.
+
+## No doxology
+
+The Latin liturgy has never joined *for thine is the kingdom* to the end of the
+prayer, and neither does the Vulgate — agreeing, as it happens, with the modern
+critical editions of the Greek. It does appear in the Roman Rite Mass as
+revised in 1969, in the form *quia tuum est regnum, et potestas, et gloria, in
+saecula*, but separated from the prayer by the embolism, *Libera nos,
+quaesumus…*

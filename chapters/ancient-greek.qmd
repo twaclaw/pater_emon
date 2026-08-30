@@ -1,0 +1,84 @@
+# Ancient Greek {#sec-ancient-greek}
+
+This is the prayer as it survives: Koine Greek, the common language of the
+eastern Mediterranean, in which Matthew's gospel was written. Everything in
+the other chapters is a translation of this.
+
+The transliteration under each line is Wikipedia's scholarly romanisation. It
+records the *spelling* rather than any one pronunciation — macrons mark long
+vowels (η as `ē`, ω as `ō`), `h` at the start of a word is the rough breathing,
+and the circumflex and acute mark the pitch accent. Read as reconstructed
+Attic-Koine it sounds nothing like the Modern Greek chapter, though the letters
+on the page are nearly identical.
+
+## Critical text (NA28)
+
+The text of the current Nestle-Aland *Novum Testamentum Graece* and the United
+Bible Societies' *Greek New Testament*, which most modern translations follow.
+
+::: {.prayer lang="grc" speech="el-GR" #grc-na28}
+| πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
+| [páter hēmôn ho en toîs ouranoîs]{.tr}
+| ἁγιασθήτω τὸ ὄνομά σου
+| [hagiasthḗtō tò ónomá sou]{.tr}
+| ἐλθέτω ἡ βασιλεία σου
+| [elthétō hē basileía sou]{.tr}
+| γενηθήτω τὸ θέλημά σου ὡς ἐν οὐρανῷ καὶ ἐπὶ γῆς
+| [genēthḗtō tò thélēmá sou hōs en ouranô(i) kaì epì gês]{.tr}
+| τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον
+| [tòn árton hēmôn tòn epioúsion dòs hēmîn sḗmeron]{.tr}
+| καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν ὡς καὶ ἡμεῖς ἀφήκαμεν τοῖς ὀφειλέταις ἡμῶν
+| [kaì áphes hēmîn tà opheilḗmata hēmôn hōs kaì hēmeîs aphḗkamen toîs opheilétais hēmôn]{.tr}
+| καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ
+| [kaì mḕ eisenénkēis hēmâs eis peirasmón allà rhŷsai hēmâs apò toû ponēroû]{.tr}
+:::
+
+## Patriarchal Edition, 1904
+
+The Byzantine-type text of the Ecumenical Patriarchate of Constantinople. This
+is the version actually prayed and sung in Greek Orthodox liturgy today, and
+the one older English Bibles were translated from.
+
+::: {.prayer lang="grc" speech="el-GR" #grc-1904 .variant}
+| Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς,
+| [Páter hēmōn ho en toîs ouranoîs,]{.tr}
+| ἁγιασθήτω τὸ ὄνομά σου·
+| [hagiasthētō to onomá sou;]{.tr}
+| ἐλθέτω ἡ βασιλεία σου·
+| [elthétō hē basileía sou;]{.tr}
+| γενηθήτω τὸ θέλημά σου ὡς ἐν οὐρανῷ καὶ ἐπὶ τῆς γῆς.
+| [genēthētō to thélēmá sou hōs en ouranōi kaì epì tês gês.]{.tr}
+| τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον,
+| [tòn árton hēmōn tòn epioúsion dòs hēmîn sēmeron,]{.tr}
+| καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν, ὡς καὶ ἡμεῖς ἀφίεμεν τοῖς ὀφειλέταις ἡμῶν.
+| [kaì aphes hēmîn tà opheilēmata hēmōn, hōs kaì hēmeîs aphíemen toîs opheilétais hēmōn.]{.tr}
+| καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ.
+| [kaì mē eisenénkēis hēmâs eis peirasmón, allà rhŷsai hēmâs apò toû ponēroû.]{.tr}
+:::
+
+Three differences from the critical text are worth spotting: ἐπὶ **τῆς** γῆς in
+the fourth line, **ἀφίεμεν** for ἀφήκαμεν in the sixth — present tense, "as we
+forgive", rather than aorist, "as we have forgiven" — and the doxology
+appended at the end:
+
+::: {.prayer lang="grc" speech="el-GR" #grc-doxology .variant}
+| ὅτι σοῦ ἐστιν ἡ βασιλεία καὶ ἡ δύναμις καὶ ἡ δόξα εἰς τοὺς αἰῶνας. ἀμήν.
+| [hóti soû estin hē basileía kaì hē dýnamis kaì hē dóxa eis toùs aiônas. amḗn.]{.tr}
+:::
+
+When a priest is officiating he uses the augmented form: *τοῦ Πατρὸς καὶ τοῦ
+Υἱοῦ καὶ τοῦ Ἁγίου Πνεύματος· νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων*, and
+the congregation answers *Ἀμήν*.
+
+## ἐπιούσιον
+
+The fifth line contains a word that occurs nowhere else in Greek literature
+outside this prayer: *ἐπιούσιον*. It was coined for the translation, or it is a
+term so ordinary that nothing else recorded it. Jerome rendered it
+*supersubstantialem* in Matthew and *quotidianum* in Luke; English settled on
+*daily*, which is a guess made comfortable by long use.
+
+Most verbs in the first half of the prayer are third-person aorist passive
+imperatives — *let your name be hallowed*, a form English can only reach
+through paraphrase. The second half turns to second-person actives: *give*,
+*forgive*, *deliver*.
