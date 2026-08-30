@@ -31,6 +31,29 @@ filters:
   - assets/prayer.lua
 
 format:
+  pdf:
+    documentclass: scrbook
+    papersize: a5
+    classoption: [DIV=12, oneside]
+    pdf-engine: lualatex
+    # EB Garamond is the web book's face and the only one here that covers
+    # every script in it: polytonic Greek, the transliteration diacritics and
+    # the Lithuanian and Spanish accents.
+    mainfont: "EB Garamond"
+    fontsize: 11pt
+    linestretch: 1.15
+    geometry:
+      - top=18mm
+      - bottom=20mm
+      - inner=18mm
+      - outer=15mm
+    toc: true
+    toc-depth: 1
+    number-sections: false
+    colorlinks: true
+    include-in-header:
+      - assets/prayer.tex
+
   html:
     theme:
       light: [cosmo, assets/css/prayer.scss]

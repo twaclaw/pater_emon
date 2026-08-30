@@ -1,5 +1,16 @@
 # Preface {.unnumbered}
 
+::: {.pdf-keep}
+The Lord's Prayer is the one text that most of Christendom says in its own
+language while believing it is saying the same thing. This book sets six of
+those languages side by side, one to a chapter: the address to the Father, the
+three wishes, the four requests.
+
+Each text is as Wikipedia records it, with a transliteration under every line
+of Greek. The commentary on where each version comes from, and the recordings,
+are in the web edition; what follows here is the prayers themselves.
+:::
+
 The Lord's Prayer is the one text that most of Christendom says in its own
 language while believing it is saying the same thing. This book sets six of
 those languages side by side, one to a chapter, so the shared skeleton is easy
@@ -14,7 +25,7 @@ each line.
 The two Greek chapters print a transliteration in the Latin alphabet beneath
 each line of Greek:
 
-::: {.prayer lang="grc" speech="el-GR" #demo}
+::: {.prayer .pdf-skip lang="grc" speech="el-GR" #demo}
 | Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
 | [Páter hēmôn ho en toîs ouranoîs]{.tr}
 :::

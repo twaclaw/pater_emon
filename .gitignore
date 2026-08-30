@@ -1,7 +1,10 @@
 /.quarto/
 /_book/
 /docs/
-*.tex
+# Quarto leaves the merged book LaTeX at the repo root on a failed PDF run.
+# Scoped to the root so assets/prayer.tex stays tracked.
+/*.tex
+/*.log
 .DS_Store
 
 **/*.quarto_ipynb

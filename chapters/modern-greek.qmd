@@ -12,6 +12,7 @@ The transliteration here does something different from the one in the Ancient
 Greek chapter. That one romanises the spelling; this one romanises the
 **sound**, as the text is spoken in Greece today.
 
+::: {.pdf-keep}
 ::: {.callout-note collapse="true"}
 ## Pronunciation key
 
@@ -31,6 +32,7 @@ Greek chapter. That one romanises the spelling; this one romanises the
 The great sound change of Greek is *iotacism*: five separate ancient vowels and
 diphthongs all collapsed into a single `i`. It is the reason the Modern Greek
 transliteration looks so much flatter than the Ancient one.
+:::
 :::
 
 ## The text

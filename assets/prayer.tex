@@ -1,0 +1,38 @@
+% Print styling for the prayer blocks. The web book's look reduced to what
+% paper can carry: an indented block, the text at reading size, the
+% transliteration under it in smaller grey italic.
+
+\newlength{\prayerindent}
+\setlength{\prayerindent}{1.2em}
+
+% \interlinepenalty keeps a prayer whole: a text and its transliteration are
+% one unit, and a version split across a page turn is hard to read against
+% the others. LaTeX moves the whole block down instead.
+\newenvironment{prayer}{%
+  \par\medskip
+  \begingroup
+  \setlength{\parindent}{0pt}%
+  \setlength{\leftskip}{\prayerindent}%
+  \setlength{\parskip}{0pt}%
+  \interlinepenalty=10000
+  \predisplaypenalty=10000
+}{%
+  \par
+  \endgroup
+  \medskip
+}
+
+% Transliteration: quieter than the text it glosses, and never hyphenated,
+% so a romanised Greek line breaks where the Greek does.
+\newcommand{\prayertr}[1]{%
+  {\small\itshape\textcolor{black!55}{\hyphenpenalty=10000 #1}}%
+}
+
+% KOMA sets headings in sans by default, which leaves the book in two
+% unrelated faces. Everything here is EB Garamond, as on the web.
+\addtokomafont{disposition}{\rmfamily}
+\addtokomafont{chapter}{\rmfamily\bfseries}
+
+% A5 pages cannot spare the drop that scrbook gives a chapter opening.
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=1.2\baselineskip]{chapter}
+\RedeclareSectionCommand[beforeskip=-1.4\baselineskip, afterskip=.5\baselineskip]{section}
