@@ -134,11 +134,18 @@
 
   // ----------------------------------------------------------- speech engine
 
-  function SpeechEngine(block, lang, hl) {
+  function SpeechEngine(block, voice, hl) {
     this.block = block;
-    this.lang = lang;
+    this.voice = voice;
+    this.lang = voice ? voice.lang : block.dataset.speechLang;
     this.hl = hl;
+
+    /* data-say is a respelling meant only for the synthesiser: the Latin
+       chapter shows "qui es in caelis" and says "qui es in celis", so an
+       Italian voice produces ecclesiastical Latin. Where there is no
+       respelling the displayed text is spoken as written. */
     this.texts = hl.verses.map(function (v) {
+      if (v.dataset.say) return v.dataset.say;
       var span = v.querySelector(".verse-text");
       return span ? span.textContent.trim() : "";
     });
@@ -154,20 +161,31 @@
     }
     this.index = i;
 
-    var u = new SpeechSynthesisUtterance(this.texts[i]);
+    var u = new SpeechSynthesisUtterance(punctuate(this.texts[i]));
+    if (this.voice) u.voice = this.voice;
     u.lang = this.lang;
-    var voice = pickVoice(this.lang);
-    if (voice) u.voice = voice;
-    u.rate = 0.85;      // a prayer, not a news bulletin
+
+    /* A prayer is not a news bulletin, but slowing the voice down is the
+       wrong lever -- past about 0.9 the synthesis stretches vowels and
+       starts to drawl. The measured cadence comes from the pause between
+       lines instead, below. */
+    u.rate = 0.92;
+    u.pitch = 0.96;
 
     u.onstart = function () { self.hl.verse(i); };
     u.onboundary = function (e) {
       if (e.name && e.name !== "word") return;
+      // charIndex points into what was spoken. Where that is a respelling it
+      // does not line up with the text on screen, so the line stays
+      // highlighted as a whole and no word is underlined.
+      if (self.hl.verses[i] && self.hl.verses[i].dataset.say) return;
       self.hl.word(i, e.charIndex, e.charLength || wordLength(self.texts[i], e.charIndex));
     };
     u.onend = function () {
       if (self.stopped) return;
-      self.speakFrom(i + 1, onstate);
+      self.timer = window.setTimeout(function () {
+        if (!self.stopped) self.speakFrom(i + 1, onstate);
+      }, VERSE_PAUSE_MS);
     };
     u.onerror = function () {
       if (self.stopped) return;
@@ -197,10 +215,21 @@
 
   SpeechEngine.prototype.stop = function (onstate) {
     this.stopped = true;
+    window.clearTimeout(this.timer);
     window.speechSynthesis.cancel();
     this.hl.clear();
     onstate("stopped");
   };
+
+  var VERSE_PAUSE_MS = 260;
+  var MAX_VOICES = 5;
+
+  /* A line ending in nothing is read with a flat, unfinished intonation and
+     runs into the next. Giving it a comma is enough for the engine to fall
+     at the end of the phrase. */
+  function punctuate(text) {
+    return /[.,;:!?\u00b7\u037e]\s*$/.test(text) ? text : text + ",";
+  }
 
   /* Firefox reports charLength as 0; fall back to reading the word off the
      text ourselves so the underline is still the right width. */
@@ -217,21 +246,69 @@
     return voiceCache;
   }
 
-  function pickVoice(lang) {
-    var all = voiceCache || voices();
-    var base = lang.split("-")[0].toLowerCase();
-    var exact = all.filter(function (v) {
-      return v.lang && v.lang.toLowerCase().replace("_", "-") === lang.toLowerCase();
-    });
-    if (exact.length) return exact[0];
-    var loose = all.filter(function (v) {
-      return v.lang && v.lang.toLowerCase().split(/[-_]/)[0] === base;
-    });
-    return loose.length ? loose[0] : null;
+  /* macOS and iOS ship joke voices localised into every language -- Spanish
+     gets a "Grandma", a "Rocko", a "Jester". They match on language like any
+     other voice, so picking the first match lands on one of these about as
+     often as not, and the result is what makes synthesised speech sound like
+     a toy. Rank them last rather than hiding them: on a device with nothing
+     else installed, a silly voice still beats silence. */
+  var NOVELTY = /^(albert|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|junior|kathy|organ|pipe organ|princess|ralph|superstar|trinoids|whisper|wobble|zarvox|deranged|hysterical|bruce|agnes|victoria|eddy|flo|grandma|grandpa|reed|rocko|sandy|shelley)\b/i;
+
+  // The names vendors give their better synthesis engines.
+  var GOOD = /(premium|enhanced|neural|natural|siri|google|wavenet|online|multilingual)/i;
+
+  function normLang(v) {
+    return (v.lang || "").toLowerCase().replace("_", "-");
   }
 
-  function hasVoice(lang) {
-    return !!pickVoice(lang);
+  /* `spec` is the block's speech attribute: one BCP 47 tag, or several in
+     preference order. The Spanish chapter asks for Colombian first and falls
+     back through the other American Spanishes, because Castilian pronounces
+     "cielos" with a th- that sounds foreign across the Atlantic. */
+  function langPrefs(spec) {
+    return String(spec).split(",")
+      .map(function (t) { return t.trim().toLowerCase(); })
+      .filter(Boolean);
+  }
+
+  function scoreVoice(v, prefs) {
+    var lang = normLang(v);
+    if (!lang) return -1;
+    var base = lang.split("-")[0];
+
+    var rank = -1;
+    for (var i = 0; i < prefs.length; i++) {
+      if (lang === prefs[i]) { rank = i; break; }
+    }
+    if (rank < 0) {
+      // no exact region match: accept the language, but rank it below every
+      // requested region so a named preference always wins
+      var wanted = prefs.some(function (p) { return p.split("-")[0] === base; });
+      if (!wanted) return -1;
+      rank = prefs.length;
+    }
+
+    var score = 1000 - rank * 50;
+    if (GOOD.test(v.name)) score += 30;
+    if (NOVELTY.test(v.name)) score -= 500;
+    if (v.localService === false) score += 5;   // cloud voices are usually better
+    if (v.default) score += 2;
+    return score;
+  }
+
+  function rankVoices(spec) {
+    var prefs = langPrefs(spec);
+    var all = voiceCache || voices();
+    return all
+      .map(function (v) { return { voice: v, score: scoreVoice(v, prefs) }; })
+      .filter(function (x) { return x.score >= 0; })
+      .sort(function (a, b) { return b.score - a.score; })
+      .map(function (x) { return x.voice; });
+  }
+
+  function pickVoice(spec) {
+    var ranked = rankVoices(spec);
+    return ranked.length ? ranked[0] : null;
   }
 
   // ------------------------------------------------------------- file engine
@@ -297,10 +374,17 @@
       };
     });
 
-    if (lang && "speechSynthesis" in window && hasVoice(lang)) {
-      sources.push({
-        label: sources.length ? "Read by this device" : "Read aloud",
-        make: function () { return new SpeechEngine(block, lang, hl); }
+    /* Offer the best voices rather than one, because which voices exist
+       varies wildly between devices and the reader can hear the difference
+       far better than any ranking can guess it. */
+    if (lang && "speechSynthesis" in window) {
+      var prefix = block.dataset.speechLabel;
+      rankVoices(lang).slice(0, MAX_VOICES).forEach(function (voice) {
+        sources.push({
+          label: prefix ? prefix + " \u00b7 " + voice.name
+                        : voice.name + " (" + voice.lang.replace("_", "-") + ")",
+          make: function () { return new SpeechEngine(block, voice, hl); }
+        });
       });
     }
 
@@ -308,6 +392,9 @@
       if (lang) noVoiceNote(block, lang);
       return;
     }
+
+    // A recording of a human voice outranks any synthesiser; keep file
+    // sources first so the default is the best thing on offer.
 
     var bar = ensureBar(block);
 
@@ -386,11 +473,15 @@
     setState("stopped");
   }
 
+  /* Better to say why there is no button than to show one that does nothing.
+     Which voices a device has is not something the page can change. */
   function noVoiceNote(block, lang) {
     var bar = ensureBar(block);
     var note = document.createElement("span");
     note.className = "prayer-credit";
-    note.textContent = "No " + lang + " voice installed on this device.";
+    note.textContent =
+      "This device has no " + langPrefs(lang)[0] + " voice installed, so this " +
+      "text cannot be read aloud here.";
     bar.appendChild(note);
   }
 

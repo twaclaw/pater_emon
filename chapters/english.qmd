@@ -8,7 +8,7 @@ and all three are given here. All are based on Matthew rather than Luke.
 
 The version that shaped English prose, still used by the Church of England.
 
-::: {.prayer lang="en" speech="en-GB" #en-bcp}
+::: {.prayer lang="en" speech="en-GB, en-US" #en-bcp}
 | Our Father, which art in heaven,
 | Hallowed be thy Name;
 | Thy kingdom come;
@@ -32,7 +32,7 @@ Note *which art*, not *who art*, and *in earth*, not *on earth* — both are
 
 The lightly modernised form used across Catholic and many Protestant churches.
 
-::: {.prayer lang="en" speech="en-GB" #en-traditional .variant}
+::: {.prayer lang="en" speech="en-GB, en-US" #en-traditional .variant}
 | Our Father, who art in heaven,
 | hallowed be thy name;
 | thy kingdom come,
@@ -55,7 +55,7 @@ yours, now and for ever.*
 The modern ecumenical translation, and the one that departs furthest from the
 familiar wording.
 
-::: {.prayer lang="en" speech="en-GB" #en-ellc .variant}
+::: {.prayer lang="en" speech="en-GB, en-US" #en-ellc .variant}
 | Our Father in heaven,
 | hallowed be your name,
 | your kingdom come,

@@ -52,8 +52,11 @@ not.
 
 - `lang` — BCP 47 tag for the text. Used for HTML semantics; dropped for LaTeX
   on purpose (see below).
-- `speech` — BCP 47 tag for speech synthesis. **This alone gives the chapter a
-  Listen button and line-by-line highlighting.** Nothing else to configure.
+- `speech` — BCP 47 tags for speech synthesis, in preference order.
+  **This alone gives the chapter a Listen button and line-by-line
+  highlighting.** Use a list when accent matters: Spanish asks for
+  `es-CO, es-419, es-MX, es-US` so it is not read in Castilian, which
+  pronounces *cielos* with a th- that sounds foreign to most speakers.
 - `#id` — prefixes the generated per-verse ids (`#it-cei-v1`, …).
 - `.variant` on a secondary version, for the smaller type.
 
@@ -112,13 +115,64 @@ Two engines behind one Listen button, in [assets/js/audio.js](assets/js/audio.js
   separated by `;`. It follows the text only when given `cues`, a start time
   per verse.
 
-Latin uses recordings because no browser ships a Latin voice. Neither bundled
-recording has cues, so neither is highlighted line by line.
+Recordings are listed first, so the default voice is a human one where we have
+it. Everything else is offered as a ranked list of synthetic voices.
 
-**Do not guess cue timings.** Silence detection on the spoken Latin gives 7
-segments for a 9-line text, with the tail segments far too short for the words
-in them; shipping those numbers would produce visibly wrong highlighting.
-Cues have to be listened to and written down.
+### Voice ranking is the thing that makes this sound acceptable
+
+macOS and iOS ship joke voices — *Grandma*, *Rocko*, *Jester*, *Eddy* —
+localised into **every** language. They match on language tag like any other
+voice. Taking the first match, which is what the code originally did, lands on
+one of these about as often as not: on a stock Mac the first `es-ES` voice is
+literally *Eddy*. If synthesis ever "sounds fake", check `NOVELTY` in
+`audio.js` before anything else.
+
+`scoreVoice` ranks by: requested region (in the order the chapter lists them),
+then a bonus for names containing *premium / enhanced / neural / natural /
+Google / Siri*, then a heavy penalty for the novelty set. Novelty voices are
+ranked last rather than removed — on a device with nothing else, a silly voice
+beats silence.
+
+### `.say`: telling the synthesiser something else
+
+A `{.say}` line attaches to the verse above as a respelling used **only** for
+speech. It is never displayed and never reaches the PDF.
+
+```markdown
+| Pater noster, qui es in cælis:
+| [Pater noster, qui es in célis:]{.say}
+```
+
+Latin uses this for its best trick. No browser has a Latin voice, but
+ecclesiastical Latin *is* Italian phonology — so the chapter declares
+`speech="it-IT"` and respells the text into Italian orthography (`ae` → `e`,
+`ti`+vowel → `zi`). The Missal's own stress accents carry over: Apple's
+Italian voice honours `advéniat` and `hódie`, verified by synthesising the
+accented and unaccented forms and diffing the audio.
+
+Word-level highlighting switches off automatically on a verse with `data-say`,
+because `charIndex` from a `boundary` event points into the spoken string, not
+the displayed one.
+
+### Do not guess cue timings
+
+Silence detection on a recording finds pauses reliably; mapping them to lines
+is the part that is guesswork. The current spoken Latin gives 8 stable
+segments against a 9-line text, and the obvious mapping implies syllable rates
+between 2.6 and 4.2 per second, which is not tight enough to trust. Shipping
+those numbers would produce visibly wrong highlighting. Cues have to be
+listened to and written down.
+
+### Re-encoding recordings
+
+Keep the source sample rate. An early version resampled 48 kHz to 22.05 kHz
+with `np.interp`, which has no anti-alias filter and cost about 17 dB in the
+4–8 kHz band where consonants live — it made the Latin sound muffled and was
+the actual reason it sounded bad. High-pass at 70 Hz, normalise to about
+0.89 peak, encode at 96 kbps mono or 128 kbps stereo.
+
+Choose between candidate recordings by measuring, not by listening once:
+compare the 90th and 10th percentile of frame RMS in dB for an SNR estimate.
 
 Recordings go in [assets/audio/](assets/audio/) with provenance in
 [assets/audio/CREDITS.md](assets/audio/CREDITS.md).

@@ -9,26 +9,54 @@ language in this book.
 
 The liturgical text, used in the Mass and the Liturgy of the Hours.
 
-::: {.prayer lang="la" speech="la" #la-missal audio="Read aloud=assets/audio/pater-noster-spoken.mp3; Gregorian chant=assets/audio/pater-noster-chant.mp3" audio-credit="Recordings from Wikimedia Commons: reading by Geremia (public domain); chant by <a href='https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg'>Schola Gregoriana</a> (CC BY-SA 3.0)."}
+::: {.prayer lang="la" speech="it-IT" speech-label="Ecclesiastical" #la-missal audio="Spoken=assets/audio/pater-noster-spoken.mp3; Gregorian chant=assets/audio/pater-noster-chant.mp3" audio-credit="Recordings from Wikimedia Commons: reading by <a href='https://commons.wikimedia.org/wiki/File:Pater-Noster.ogg'>Dan Palraz</a> (CC0); chant by <a href='https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg'>Schola Gregoriana</a> (CC BY-SA 3.0)."}
 | Pater noster, qui es in cælis:
+| [Pater noster, qui es in célis:]{.say}
 | sanctificétur nomen tuum;
+| [sanctificétur nomen tuum;]{.say}
 | advéniat regnum tuum;
+| [advéniat regnum tuum;]{.say}
 | fiat volúntas tua, sicut in cælo, et in terra.
+| [fiat volúntas tua, sicut in célo, et in terra.]{.say}
 | Panem nostrum cotidiánum da nobis hódie;
+| [Panem nostrum cotidiánum da nobis hódie;]{.say}
 | et dimítte nobis débita nostra,
+| [et dimítte nobis débita nostra,]{.say}
 | sicut et nos dimíttimus debitóribus nostris;
+| [sicut et nos dimíttimus debitóribus nostris;]{.say}
 | et ne nos indúcas in tentatiónem;
+| [et ne nos indúcas in tentaziónem;]{.say}
 | sed líbera nos a malo.
+| [sed líbera nos a malo.]{.say}
 :::
 
 The acute accents are not classical: they are the Missal's stress marks,
 printed to tell a reader which syllable to lean on when chanting. Before the
 1962 edition, *cotidianum* was spelled *quotidianum*.
 
-Latin is the one chapter with real recordings rather than a synthetic voice —
-no browser ships a Latin voice, and the language has been sung for long enough
-that a recording is the better witness anyway. The **Listen** button offers a
-plain reading and the Gregorian setting; both come from Wikimedia Commons.
+## Hearing it
+
+No browser ships a Latin voice, so this chapter is the one that has to work
+for its audio. The **Listen** button offers three things.
+
+Two are recordings from Wikimedia Commons: a spoken reading and the Gregorian
+setting. They are human voices, which no synthesiser matches, but a recording
+does not know where one line ends, so neither follows the text line by line.
+
+The third is the text read by an Italian voice, and it is not a joke.
+Ecclesiastical Latin *is* pronounced with Italian phonology — it is what
+choirs are taught, and why *caelis* is sung "CHAY-lis" rather than the
+classical "KY-lees". Nearly every rule transfers untouched: *c* and *g* soften
+before *e* and *i*, *gn* is /ɲ/, *sc* before a front vowel is /ʃ/, *h* is
+silent, *qu* is /kw/. What does not transfer is spelling, so the synthesiser
+is handed a respelling of the same text — *cælis* → *célis*, *tentatiónem* →
+*tentaziónem* — while the page keeps the Latin. The Missal's stress marks do
+the rest: *advéniat*, *hódie*, *dimíttimus* are accented on the page precisely
+so a reader knows where to lean, and an Italian voice reads those accents the
+same way.
+
+Because it is synthesised a line at a time, it is the only Latin option that
+highlights the text as it goes.
 
 ## Vulgata Clementina
 

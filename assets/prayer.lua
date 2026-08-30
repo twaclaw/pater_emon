@@ -10,8 +10,10 @@
       | [hagiasthḗtō tò ónomá sou]{.tr}
       :::
 
-  Every line that is not marked `.tr` opens a new verse; a `.tr` line attaches
-  to the verse above it as its transliteration. Output:
+  Every unmarked line opens a new verse. A `.tr` line attaches to the verse
+  above as its transliteration, printed under the text. A `.say` line attaches
+  as a respelling for the speech synthesiser -- never printed, never in the
+  PDF -- which is how Latin is read with an Italian voice. Output:
 
       <div class="prayer" data-prayer-id="grc-na28" data-speech-lang="el-GR">
         <div class="verse" id="grc-na28-v1" data-verse="1">
@@ -37,12 +39,14 @@ local function has_class(el, name)
   return el.classes:includes(name)
 end
 
--- A line of a LineBlock is a list of inlines. It counts as a transliteration
--- when its only meaningful content is a Span carrying the `.tr` class.
-local function translit_span(inlines)
+-- A line of a LineBlock is a list of inlines. It counts as a marked line when
+-- its only meaningful content is a Span carrying `class`: `.tr` for a
+-- transliteration printed under the text, `.say` for a respelling handed to
+-- the speech synthesiser and never shown.
+local function marked_span(inlines, class)
   local found = nil
   for _, inl in ipairs(inlines) do
-    if inl.t == "Span" and has_class(inl, "tr") then
+    if inl.t == "Span" and has_class(inl, class) then
       if found then return nil end
       found = inl
     elseif inl.t ~= "Space" and inl.t ~= "SoftBreak" then
@@ -71,10 +75,13 @@ local function build(div)
     if block.t == "LineBlock" then
       for _, line in ipairs(block.content) do
         if not is_blank(line) then
-          local tr = translit_span(line)
-          if tr and #verses > 0 then
+          local tr = marked_span(line, "tr")
+          local say = marked_span(line, "say")
+          if say and #verses > 0 then
+            verses[#verses].say = pandoc.utils.stringify(say.content)
+          elseif tr and #verses > 0 then
             verses[#verses].tr = tr.content
-          elseif not tr then
+          elseif not tr and not say then
             table.insert(verses, { text = line })
           end
         end
@@ -118,9 +125,12 @@ local function build(div)
       parts:insert(pandoc.Span(v.tr, pandoc.Attr("", { "verse-tr" }, {})))
     end
 
+    local vattrs = { ["data-verse"] = tostring(i) }
+    if v.say then vattrs["data-say"] = v.say end
+
     out:insert(pandoc.Div(
       pandoc.Plain(parts),
-      pandoc.Attr(prayer_id .. "-v" .. i, { "verse" }, { ["data-verse"] = tostring(i) })
+      pandoc.Attr(prayer_id .. "-v" .. i, { "verse" }, vattrs)
     ))
   end
 

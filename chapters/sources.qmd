@@ -76,18 +76,29 @@ and peak-normalised; the audio is otherwise unedited.
 
 | Recording | Author | Licence |
 |---|---|---|
-| [Pater noster.ogg](https://commons.wikimedia.org/wiki/File:Pater_noster.ogg) — spoken | Geremia | Public domain |
+| [Pater-Noster.ogg](https://commons.wikimedia.org/wiki/File:Pater-Noster.ogg) — spoken | Dan Palraz | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | [Schola Gregoriana-Pater Noster.ogg](https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg) — chant | Schola Gregoriana | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
 
-Commons has no recording of this prayer in Spanish, Lithuanian or either form
-of Greek, so those chapters are read by the voice installed on your own
-device. MIDI files of *Pater noster* and *Vater unser* do exist on Commons,
-but MIDI stores notes rather than words — it can carry the chant's melody and
-never the text — so it is no use for reading a prayer aloud.
+Commons holds two other readings of the prayer in Latin. The one used here was
+picked on measurement rather than taste: it has roughly 15 dB more signal
+above its noise floor than the next best, which is the difference between a
+clean voice and a hissy one.
+
+Commons has no recording of this prayer in Spanish, Lithuanian, Italian,
+German or either form of Greek, so those chapters are read by a voice
+installed on your own device. MIDI files of *Pater noster* and *Vater unser*
+do exist there, but MIDI stores notes rather than words — it can carry the
+chant's melody and never the text — so it is no use for reading a prayer
+aloud.
 
 Neither recording has a verified cue list, so neither follows the text line by
-line yet. Measured timings can be added without touching any code; the format
-is documented in the [README](https://github.com/dsandovalv/lords_prayer#adding-audio).
+line. The synthesised Latin does, because it is generated a line at a time.
+
+**Ecclesiastical Latin.** The Latin chapter hands its synthesiser a respelling
+of the text — *cælis* → *célis*, *tentatiónem* → *tentaziónem* — so that an
+Italian voice produces the ecclesiastical pronunciation. Only the spelling is
+changed and only for the synthesiser; the text on the page and in the PDF is
+the Missal's, untouched.
 
 ## Reuse
 

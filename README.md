@@ -104,6 +104,16 @@ each line as it is spoken. Two engines sit behind that one button
 | `SpeechEngine` | the block has `speech="xx-XX"` and the device has a voice for it | exact — one utterance per verse, plus word-level from `boundary` events |
 | `FileEngine` | the block has `audio="..."` | needs a `cues` list; without one the recording just plays |
 
+`speech` takes tags in preference order, so a chapter can ask for an accent:
+Spanish uses `es-CO, es-419, es-MX, es-US`. Voices are then ranked — requested
+region first, a bonus for premium/neural/Google engines, and a heavy penalty
+for the novelty voices Apple ships in every language — and the best few are
+offered in a picker, because which voices a device has varies enormously.
+
+A `{.say}` line attaches to the verse above as a respelling used only for
+speech, never displayed and never in the PDF. Latin uses it to be read as
+ecclesiastical Latin by an Italian voice; see [CLAUDE.md](CLAUDE.md#audio).
+
 Speech synthesis is the extensible path: a new chapter gets audio and
 synchronised highlighting from its `speech` attribute alone, with no timings
 to measure and nothing to keep in step, because each verse is spoken as its
