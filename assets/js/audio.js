@@ -3,10 +3,11 @@
  *
  * A prayer block declares what it can be listened to with, in markdown:
  *
- *   ::: {.prayer lang="la" speech="la" audio="Read aloud=assets/audio/x.mp3" #la-missal}
+ *   ::: {.prayer lang="la" speech="la" audio="assets/audio/x.mp3" #la-missal}
  *
- * and this file turns that into a player. Two engines sit behind one small
- * interface, so a chapter never has to care which one it gets:
+ * and this file turns that into a player: one Listen button playing one
+ * source, chosen here rather than offered as a menu. Two engines sit behind
+ * one small interface, so a chapter never has to care which one it gets:
  *
  *   SpeechEngine  speaks the verses with the browser's own voice for the
  *                 block's language. It speaks one utterance per verse, so
@@ -20,7 +21,8 @@
  *                 sounding rather than followed line by line.
  *
  * Adding a language means adding `speech="xx-XX"` to its prayer block. Adding
- * a recording means adding `audio="Label=path"`. Neither needs code here.
+ * a recording means adding `audio="path"`, which then takes precedence over
+ * any voice. Neither needs code here.
  */
 (function () {
   "use strict";
@@ -47,27 +49,12 @@
     return bar;
   }
 
-  function parsePairs(spec) {
-    // "Label=path; Other label=other/path" -> [{label, value}, ...]
+  function parseCues(spec) {
+    // "0,3.1,5.7" -> [0, 3.1, 5.7], one start time per verse
     if (!spec) return [];
-    return spec.split(";").map(function (chunk) {
-      var at = chunk.indexOf("=");
-      if (at < 0) return { label: "Listen", value: chunk.trim() };
-      return {
-        label: chunk.slice(0, at).trim(),
-        value: chunk.slice(at + 1).trim()
-      };
-    }).filter(function (p) { return p.value; });
-  }
-
-  function parseCueSets(spec) {
-    // "0,3.1,5.7; 0,2,4" -> [[0,3.1,5.7],[0,2,4]]
-    if (!spec) return [];
-    return spec.split(";").map(function (set) {
-      return set.split(",")
-        .map(function (t) { return parseFloat(t); })
-        .filter(function (t) { return !isNaN(t); });
-    });
+    return spec.split(",")
+      .map(function (t) { return parseFloat(t); })
+      .filter(function (t) { return !isNaN(t); });
   }
 
   // ------------------------------------------------------------ highlighting
@@ -222,7 +209,6 @@
   };
 
   var VERSE_PAUSE_MS = 260;
-  var MAX_VOICES = 5;
 
   /* A line ending in nothing is read with a flat, unfinished intonation and
      runs into the next. Giving it a comma is enough for the engine to fall
@@ -262,7 +248,7 @@
   }
 
   /* `spec` is the block's speech attribute: one BCP 47 tag, or several in
-     preference order. The Spanish chapter asks for Colombian first and falls
+     preference order. A Spanish block would ask for Colombian first and fall
      back through the other American Spanishes, because Castilian pronounces
      "cielos" with a th- that sounds foreign across the Atlantic. */
   function langPrefs(spec) {
@@ -296,19 +282,16 @@
     return score;
   }
 
-  function rankVoices(spec) {
-    var prefs = langPrefs(spec);
-    var all = voiceCache || voices();
-    return all
-      .map(function (v) { return { voice: v, score: scoreVoice(v, prefs) }; })
-      .filter(function (x) { return x.score >= 0; })
-      .sort(function (a, b) { return b.score - a.score; })
-      .map(function (x) { return x.voice; });
-  }
-
+  /* The single voice a block is read with: the highest scoring one that
+     speaks the requested language, or null when the device has none. */
   function pickVoice(spec) {
-    var ranked = rankVoices(spec);
-    return ranked.length ? ranked[0] : null;
+    var prefs = langPrefs(spec);
+    var best = null, bestScore = -1;
+    (voiceCache || voices()).forEach(function (v) {
+      var score = scoreVoice(v, prefs);
+      if (score > bestScore) { best = v; bestScore = score; }
+    });
+    return bestScore >= 0 ? best : null;
   }
 
   // ------------------------------------------------------------- file engine
@@ -364,43 +347,32 @@
     if (!hl.verses.length) return;
 
     var lang = block.dataset.speechLang;
-    var tracks = parsePairs(block.dataset.audio);
-    var cueSets = parseCueSets(block.dataset.cues);
+    var track = (block.dataset.audio || "").trim();
 
-    var sources = tracks.map(function (t, i) {
-      return {
-        label: t.label,
-        make: function () { return new FileEngine(block, t.value, cueSets[i], hl); }
-      };
-    });
-
-    /* Offer the best voices rather than one, because which voices exist
-       varies wildly between devices and the reader can hear the difference
-       far better than any ranking can guess it. */
-    if (lang && "speechSynthesis" in window) {
-      var prefix = block.dataset.speechLabel;
-      rankVoices(lang).slice(0, MAX_VOICES).forEach(function (voice) {
-        sources.push({
-          label: prefix ? prefix + " \u00b7 " + voice.name
-                        : voice.name + " (" + voice.lang.replace("_", "-") + ")",
-          make: function () { return new SpeechEngine(block, voice, hl); }
-        });
-      });
+    /* One button, one source. A recording of a human reading outranks any
+       synthesiser, so a chapter that has one is played from it; otherwise
+       the block is read by the best voice the device has. Asking the reader
+       to audition a list of voices before hearing the prayer was worse than
+       choosing for them, which is what scoreVoice is for. */
+    var make = null;
+    if (track) {
+      var cues = parseCues(block.dataset.cues);
+      make = function () { return new FileEngine(block, track, cues, hl); };
+    } else if (lang && "speechSynthesis" in window) {
+      var voice = pickVoice(lang);
+      if (voice) make = function () { return new SpeechEngine(block, voice, hl); };
     }
 
-    if (!sources.length) {
+    if (!make) {
       if (lang) noVoiceNote(block, lang);
       return;
     }
 
-    // A recording of a human voice outranks any synthesiser; keep file
-    // sources first so the default is the best thing on offer.
-
     var bar = ensureBar(block);
 
     var player = {
-      block: block, hl: hl, sources: sources,
-      engine: null, which: 0, state: "stopped", setState: null
+      block: block, hl: hl, make: make,
+      engine: null, state: "stopped", setState: null
     };
     players.push(player);
 
@@ -432,7 +404,7 @@
       }
       if (player.state === "stopped") {
         stopAllExcept(player);
-        player.engine = player.sources[player.which].make();
+        player.engine = player.make();
       }
       player.engine.play(setState);
     });
@@ -444,24 +416,6 @@
 
     bar.appendChild(play);
     bar.appendChild(stop);
-
-    if (sources.length > 1) {
-      var select = document.createElement("select");
-      select.className = "prayer-source";
-      select.setAttribute("aria-label", "Choose a voice");
-      sources.forEach(function (s, i) {
-        var opt = document.createElement("option");
-        opt.value = String(i);
-        opt.textContent = s.label;
-        select.appendChild(opt);
-      });
-      select.addEventListener("change", function () {
-        if (player.engine) player.engine.stop(setState);
-        player.engine = null;
-        player.which = parseInt(select.value, 10);
-      });
-      bar.appendChild(select);
-    }
 
     if (block.dataset.audioCredit) {
       var credit = document.createElement("span");

@@ -16,7 +16,9 @@ reading, which measured about 15 dB noisier.
 ## pater-noster-chant.mp3
 
 The Lord's Prayer sung in Gregorian chant, 75s. Kept in stereo: it is a choir
-in a room, and the room is part of it.
+in a room, and the room is part of it. Not currently played: each prayer is
+offered with one source, and for Latin that is the spoken reading. The file
+still ships with the site, so its attribution stands.
 
 - Source: [File:Schola Gregoriana-Pater Noster.ogg](https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg)
 - Author: Schola Gregoriana

@@ -92,21 +92,6 @@ $font-size-root: 17px !default;
   color: #fff;
 }
 
-/* Voice names run long -- "Google espanol de Estados Unidos" -- and the bar
-   sits above the text, so cap the width rather than let it push the other
-   controls onto a second row. */
-.prayer-source {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 0.8rem;
-  padding: 0.4rem 0.5rem;
-  border-radius: 999px;
-  border: 1px solid rgba(127, 127, 127, 0.45);
-  background: transparent;
-  color: inherit;
-  max-width: min(22ch, 60vw);
-  text-overflow: ellipsis;
-}
-
 /* Its own row under the buttons, so a long attribution does not push the
    transliteration toggle off the end of the bar. */
 .prayer-credit {

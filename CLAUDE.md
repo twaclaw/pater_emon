@@ -54,9 +54,10 @@ not.
   on purpose (see below).
 - `speech` — BCP 47 tags for speech synthesis, in preference order.
   **This alone gives the chapter a Listen button and line-by-line
-  highlighting.** Use a list when accent matters: Spanish asks for
-  `es-CO, es-419, es-MX, es-US` so it is not read in Castilian, which
-  pronounces *cielos* with a th- that sounds foreign to most speakers.
+  highlighting.** Use a list when accent matters: a Spanish chapter would ask
+  for `es-CO, es-419, es-MX, es-US` so it is not read in Castilian, which
+  pronounces *cielos* with a th- that sounds foreign to most speakers. (The
+  Spanish chapter here declares no `speech` at all and so is not read aloud.)
 - `#id` — prefixes the generated per-verse ids (`#it-cei-v1`, …).
 - `.variant` on a secondary version, for the smaller type.
 
@@ -111,12 +112,16 @@ Two engines behind one Listen button, in [assets/js/audio.js](assets/js/audio.js
   per verse, so verse highlighting is exact by construction with no timings to
   measure; `boundary` events underline the word being said. This is the path
   for new languages.
-- **`FileEngine`** — a recording, declared as `audio="Label=path"` pairs
-  separated by `;`. It follows the text only when given `cues`, a start time
-  per verse.
+- **`FileEngine`** — a recording, declared as `audio="path"`. It follows the
+  text only when given `cues`, a start time per verse.
 
-Recordings are listed first, so the default voice is a human one where we have
-it. Everything else is offered as a ranked list of synthetic voices.
+**One block, one source, no menu.** A recording wins where a chapter has one;
+otherwise the block is read by the single best-ranked voice on the device.
+There was a `<select>` of the top five voices here once and it asked the
+reader to audition a list before hearing the prayer, which is the ranking's
+job. A block that declares both `audio` and `speech` never reaches the voice,
+so `.say` and `speech` on such a block are dormant until the recording goes
+(this is the state the Latin chapter is in).
 
 ### Voice ranking is the thing that makes this sound acceptable
 
@@ -131,7 +136,8 @@ literally *Eddy*. If synthesis ever "sounds fake", check `NOVELTY` in
 then a bonus for names containing *premium / enhanced / neural / natural /
 Google / Siri*, then a heavy penalty for the novelty set. Novelty voices are
 ranked last rather than removed — on a device with nothing else, a silly voice
-beats silence.
+beats silence. `pickVoice` takes the top of that ranking and nothing else is
+offered, so the ranking is now the whole of the choice.
 
 ### `.say`: telling the synthesiser something else
 

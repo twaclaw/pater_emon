@@ -1,65 +1,16 @@
 # Preface {.unnumbered}
 
-::: {.pdf-keep}
-The Lord's Prayer is the one text that most of Christendom says in its own
-language while believing it is saying the same thing. This book sets eight of
-those languages side by side, one to a chapter: the address to the Father, the
-three wishes, the four requests.
+Here's a short exercise in linguistics using a document that has been translated into thousands of languages. This site presents the text of the Lord's Prayer from the Gospels of Matthew and Luke in several languages. It also includes transliterations for the Greek versions and playable audio.
 
-Each text is as Wikipedia records it, with a transliteration under every line
-of Greek. The commentary on where each version comes from, and the recordings,
-are in the web edition; what follows here is the prayers themselves.
-:::
-
-The Lord's Prayer is the one text that most of Christendom says in its own
-language while believing it is saying the same thing. This book sets eight of
-those languages side by side, one to a chapter, so the shared skeleton is easy
-to see: the address to the Father, the three wishes, the four requests.
-
-The order is the order of descent: the Koine original, then Modern Greek and
-Latin, then the vernaculars that took the prayer on from the Latin.
-
-Each chapter gives the text as Wikipedia records it, the tradition it comes
-from, and — where the script is not Latin — a transliteration printed under
-each line.
-
-## Reading the Greek chapters
-
-The two Greek chapters print a transliteration in the Latin alphabet beneath
-each line of Greek:
-
-::: {.prayer .pdf-skip lang="grc" speech="el-GR" #demo}
-| Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
-| [Páter hēmôn ho en toîs ouranoîs]{.tr}
-:::
-
-The **Hide transliteration** button above the text removes those lines. The
-choice is remembered across chapters and across visits, so you can read the
-Greek unaided once you no longer need the crutch.
-
-The two Greek chapters transliterate to different targets, and it is worth
-knowing which you are looking at. The Ancient Greek chapter uses Wikipedia's
-scholarly romanisation, which encodes the *spelling* — vowel length, breathings,
-pitch accents. The Modern Greek chapter transliterates the *sound* of the text
-as it is spoken in Greece today. The same written word therefore comes out
-differently in the two chapters, which is the point.
 
 ## Listening
 
-Every chapter has a **Listen** button that reads the prayer aloud and
-highlights each line as it is said, word by word where the browser reports
-word boundaries.
+Most chapters have a **Listen** button that reads the prayer aloud and highlights each line as it is said. Where the browser reports word boundaries, the button reads each word individually.
 
-Most chapters use the voice your own device has for that language, which is
-why the reading follows the text exactly: each line is spoken as its own
-utterance, so there is nothing to synchronise. If your device has no voice for
-a language the button says so rather than appearing and failing.
+Most chapters use the voice that your device has for that language. This is why the reading follows the text exactly; each line is spoken as its own utterance, so there is nothing to synchronize. If your device has no voice for a language, the button will say so instead of appearing and failing.
 
-Latin is the exception. No browser ships a Latin voice, so that chapter offers
-two real recordings from Wikimedia Commons instead — a spoken reading and the
-Gregorian setting. A recording carries no idea of where one line ends and the
-next begins, so it plays without following the text line by line until someone
-measures the timings.
+Latin is the other exception. Since no browser ships with a Latin voice, that chapter plays a real recording from Wikimedia Commons instead: a spoken reading. However, a recording carries no idea of where one line ends and the next begins, so it plays without following the text line by line.
+
 
 ## The eight chapters
 

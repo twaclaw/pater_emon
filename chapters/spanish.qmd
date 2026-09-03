@@ -8,7 +8,7 @@ San Miguel's 1793 translation of the Vulgate and to the Reina-Valera.
 
 ## The text
 
-::: {.prayer lang="es" speech="es-CO, es-419, es-MX, es-US" #es-biblical}
+::: {.prayer lang="es" #es-biblical}
 | Padre nuestro, que estás en los cielos,
 | santificado sea tu Nombre;
 | venga a nosotros tu reino;
@@ -28,7 +28,7 @@ The form said aloud at Mass differs from the biblical text in one theologically
 loaded place. Where the Greek has *ὀφειλήματα* and the Latin *debita* —
 **debts** — the Spanish liturgy says **ofensas**, offences:
 
-::: {.prayer lang="es" speech="es-CO, es-419, es-MX, es-US" #es-liturgical .variant}
+::: {.prayer lang="es" #es-liturgical .variant}
 | Padre nuestro, que estás en el cielo,
 | santificado sea tu Nombre;
 | venga a nosotros tu reino;

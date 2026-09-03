@@ -9,7 +9,7 @@ language in this book.
 
 The liturgical text, used in the Mass and the Liturgy of the Hours.
 
-::: {.prayer lang="la" speech="it-IT" speech-label="Ecclesiastical" #la-missal audio="Spoken=assets/audio/pater-noster-spoken.mp3; Gregorian chant=assets/audio/pater-noster-chant.mp3" audio-credit="Recordings from Wikimedia Commons: reading by <a href='https://commons.wikimedia.org/wiki/File:Pater-Noster.ogg'>Dan Palraz</a> (CC0); chant by <a href='https://commons.wikimedia.org/wiki/File:Schola_Gregoriana-Pater_Noster.ogg'>Schola Gregoriana</a> (CC BY-SA 3.0)."}
+::: {.prayer lang="la" speech="it-IT" #la-missal audio="assets/audio/pater-noster-spoken.mp3" audio-credit="Reading from Wikimedia Commons by <a href='https://commons.wikimedia.org/wiki/File:Pater-Noster.ogg'>Dan Palraz</a> (CC0)."}
 | Pater noster, qui es in cælis:
 | [Pater noster, qui es in célis:]{.say}
 | sanctificétur nomen tuum;
@@ -36,27 +36,23 @@ printed to tell a reader which syllable to lean on when chanting. Before the
 
 ## Hearing it
 
-No browser ships a Latin voice, so this chapter is the one that has to work
-for its audio. The **Listen** button offers three things.
+No browser ships a Latin voice, so this chapter does not ask for one: the
+**Listen** button plays a spoken reading from Wikimedia Commons. It is a human
+voice, which no synthesiser matches, but a recording does not know where one
+line ends, so it does not follow the text line by line the way the chapters
+read by a voice do.
 
-Two are recordings from Wikimedia Commons: a spoken reading and the Gregorian
-setting. They are human voices, which no synthesiser matches, but a recording
-does not know where one line ends, so neither follows the text line by line.
-
-The third is the text read by an Italian voice, and it is not a joke.
-Ecclesiastical Latin *is* pronounced with Italian phonology — it is what
-choirs are taught, and why *caelis* is sung "CHAY-lis" rather than the
+Latin can be synthesised all the same, and the chapter keeps what it takes to
+do it. Ecclesiastical Latin *is* pronounced with Italian phonology — it is
+what choirs are taught, and why *caelis* is sung "CHAY-lis" rather than the
 classical "KY-lees". Nearly every rule transfers untouched: *c* and *g* soften
 before *e* and *i*, *gn* is /ɲ/, *sc* before a front vowel is /ʃ/, *h* is
-silent, *qu* is /kw/. What does not transfer is spelling, so the synthesiser
-is handed a respelling of the same text — *cælis* → *célis*, *tentatiónem* →
-*tentaziónem* — while the page keeps the Latin. The Missal's stress marks do
-the rest: *advéniat*, *hódie*, *dimíttimus* are accented on the page precisely
-so a reader knows where to lean, and an Italian voice reads those accents the
-same way.
-
-Because it is synthesised a line at a time, it is the only Latin option that
-highlights the text as it goes.
+silent, *qu* is /kw/. What does not transfer is spelling, so an Italian voice
+has to be handed a respelling of the same text — *cælis* → *célis*,
+*tentatiónem* → *tentaziónem* — while the page keeps the Latin. The Missal's
+stress marks do the rest: *advéniat*, *hódie*, *dimíttimus* are accented on
+the page precisely so a reader knows where to lean, and an Italian voice reads
+those accents the same way. The recording is played in preference to it.
 
 ## Vulgata Clementina
 
