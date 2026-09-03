@@ -25,15 +25,8 @@ jobs:
         with:
           tinytex: true
 
-      # The PDF is set in EB Garamond, the only face in TeX Live that covers
-      # polytonic Greek, the transliteration diacritics and the Lithuanian
-      # accents at once. TinyTeX does not ship it, and a missing OTF is not
-      # the kind of error Quarto auto-installs its way out of.
-      - name: Install PDF fonts
-        run: tlmgr install ebgaramond koma-script
-
       - name: Render book
-        run: quarto render
+        run: quarto render --to html
 
       - uses: actions/configure-pages@v5
 
