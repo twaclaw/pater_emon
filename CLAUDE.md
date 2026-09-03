@@ -160,6 +160,29 @@ Word-level highlighting switches off automatically on a verse with `data-say`,
 because `charIndex` from a `boundary` event points into the spoken string, not
 the displayed one.
 
+### Reading speed
+
+One slider, shared by every block and stored under `lp:speed`, the way the
+transliteration toggle is. `1` means each source at its own natural pace --
+the recording as recorded, the voice at `BASE_RATE` -- not "unadjusted".
+
+The two engines take it differently, and the difference is visible to the
+reader, so do not try to hide it:
+
+- `FileEngine.setSpeed` changes `playbackRate` immediately, mid-line. It also
+  sets `preservesPitch` (and the old `webkitPreservesPitch`), without which a
+  slowed chant sings flat.
+- `SpeechEngine` fixes `rate` when the utterance is constructed, so a change
+  lands on the next line. Restarting the current line to apply it sooner is
+  worse: it repeats words the reader has already heard.
+
+`VERSE_PAUSE_MS` is divided by the speed, so the silence between lines grows
+with the drawl instead of staying put and sounding clipped.
+
+`clampSpeed` rounds to two decimals after snapping to the step. Snapping alone
+leaves binary float error -- 0.6 comes back as 0.6000000000000001 and is
+stored and echoed that way.
+
 ### Do not guess cue timings
 
 Silence detection on a recording finds pauses reliably; mapping them to lines

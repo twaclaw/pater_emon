@@ -152,12 +152,14 @@
     if (this.voice) u.voice = this.voice;
     u.lang = this.lang;
 
-    /* A prayer is not a news bulletin, but slowing the voice down is the
-       wrong lever -- past about 0.9 the synthesis stretches vowels and
-       starts to drawl. The measured cadence comes from the pause between
-       lines instead, below. */
-    u.rate = 0.92;
-    u.pitch = 0.96;
+    /* Read at BASE_RATE by default: a prayer is not a news bulletin. Going
+       much below it stretches vowels into a drawl, which is why the measured
+       cadence comes from the pause between lines instead -- but a reader
+       following an unfamiliar script wants the drawl, so the slider allows
+       it. Rate is fixed when the utterance is created, so a change reaches
+       the next line rather than this one. */
+    u.rate = BASE_RATE * speed;
+    u.pitch = BASE_PITCH;
 
     u.onstart = function () { self.hl.verse(i); };
     u.onboundary = function (e) {
@@ -172,7 +174,7 @@
       if (self.stopped) return;
       self.timer = window.setTimeout(function () {
         if (!self.stopped) self.speakFrom(i + 1, onstate);
-      }, VERSE_PAUSE_MS);
+      }, VERSE_PAUSE_MS / speed);
     };
     u.onerror = function () {
       if (self.stopped) return;
@@ -209,6 +211,46 @@
   };
 
   var VERSE_PAUSE_MS = 260;
+
+  // ------------------------------------------------------------------ speed
+
+  /* One speed for the whole book, remembered, the way the transliteration
+     toggle is: a reader who slows the Greek down wants the Latin slow too.
+     1 means each source at its own natural pace -- the recording as recorded,
+     the voice at BASE_RATE -- not "no adjustment applied". */
+  var SPEED_KEY = "lp:speed";
+  var SPEED_MIN = 0.5, SPEED_MAX = 1.25, SPEED_STEP = 0.05;
+  var BASE_RATE = 0.92, BASE_PITCH = 0.96;
+  var speed = 1;
+
+  /* Snapping to the step reintroduces binary float error -- 0.6 comes back
+     as 0.6000000000000001 and gets stored and echoed that way -- so round to
+     the two decimals the step can actually express. */
+  function clampSpeed(v) {
+    if (isNaN(v)) return 1;
+    v = Math.round(v / SPEED_STEP) * SPEED_STEP;
+    v = Math.round(v * 100) / 100;
+    return Math.min(SPEED_MAX, Math.max(SPEED_MIN, v));
+  }
+
+  function loadSpeed() {
+    try {
+      var raw = parseFloat(window.localStorage.getItem(SPEED_KEY));
+      if (!isNaN(raw)) speed = clampSpeed(raw);
+    } catch (e) {
+      /* blocked storage: this page keeps its own speed and forgets it */
+    }
+  }
+
+  function saveSpeed() {
+    try {
+      window.localStorage.setItem(SPEED_KEY, String(speed));
+    } catch (e) { /* as above */ }
+  }
+
+  function speedLabel() {
+    return speed.toFixed(2).replace(/\.?0+$/, "") + "\u00d7";
+  }
 
   /* A line ending in nothing is read with a flat, unfinished intonation and
      runs into the next. Giving it a comma is enough for the engine to fall
@@ -301,6 +343,7 @@
     this.cues = cues || [];
     this.audio = new Audio(siteURL(src));
     this.audio.preload = "none";
+    this.setSpeed(speed);
 
     var self = this;
     if (this.cues.length) {
@@ -315,6 +358,15 @@
       block.classList.add("no-cues");
     }
   }
+
+  /* Without preservesPitch a slowed recording drops in pitch, and a chant
+     sung a third flat is worse than one that is merely slow. Safari carried
+     it under a prefix for years. Unlike speech, this takes effect at once. */
+  FileEngine.prototype.setSpeed = function (v) {
+    this.audio.preservesPitch = true;
+    this.audio.webkitPreservesPitch = true;
+    this.audio.playbackRate = v;
+  };
 
   FileEngine.prototype.play = function (onstate) {
     var self = this;
@@ -416,6 +468,7 @@
 
     bar.appendChild(play);
     bar.appendChild(stop);
+    bar.appendChild(speedControl());
 
     if (block.dataset.audioCredit) {
       var credit = document.createElement("span");
@@ -425,6 +478,52 @@
     }
 
     setState("stopped");
+  }
+
+  /* Every block that can be listened to gets its own slider, but they are
+     views onto one value: moving any of them moves the rest. */
+  function speedControl() {
+    var wrap = document.createElement("span");
+    wrap.className = "prayer-speed";
+
+    var input = document.createElement("input");
+    input.type = "range";
+    input.min = String(SPEED_MIN);
+    input.max = String(SPEED_MAX);
+    input.step = String(SPEED_STEP);
+    input.value = String(speed);
+    input.setAttribute("aria-label", "Reading speed");
+    input.setAttribute("aria-valuetext", speedLabel());
+
+    var out = document.createElement("span");
+    out.className = "prayer-speed-value";
+    out.textContent = speedLabel();
+
+    input.addEventListener("input", function () {
+      applySpeed(parseFloat(input.value));
+    });
+
+    wrap.appendChild(input);
+    wrap.appendChild(out);
+    return wrap;
+  }
+
+  function applySpeed(v) {
+    speed = clampSpeed(v);
+    saveSpeed();
+
+    document.querySelectorAll(".prayer-speed input").forEach(function (el) {
+      if (parseFloat(el.value) !== speed) el.value = String(speed);
+      el.setAttribute("aria-valuetext", speedLabel());
+    });
+    document.querySelectorAll(".prayer-speed-value").forEach(function (el) {
+      el.textContent = speedLabel();
+    });
+
+    // A recording can change pace mid-line; a queued utterance cannot.
+    players.forEach(function (p) {
+      if (p.engine && p.engine.setSpeed) p.engine.setSpeed(speed);
+    });
   }
 
   /* Better to say why there is no button than to show one that does nothing.
@@ -448,6 +547,7 @@
   }
 
   function init() {
+    loadSpeed();
     document.querySelectorAll(".prayer").forEach(buildPlayer);
   }
 

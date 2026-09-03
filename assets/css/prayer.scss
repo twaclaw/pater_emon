@@ -92,6 +92,32 @@ $font-size-root: 17px !default;
   color: #fff;
 }
 
+/* ---------- speed ---------- */
+
+.prayer-speed {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.prayer-speed input[type="range"] {
+  width: 5.5rem;
+  height: 1rem;
+  accent-color: var(--bs-primary, #2c6e9b);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* Tabular figures and a fixed width, so the bar does not twitch sideways
+   as the number goes from 1x to 0.85x while the slider is being dragged. */
+.prayer-speed-value {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+  min-width: 2.6em;
+}
+
 /* Its own row under the buttons, so a long attribution does not push the
    transliteration toggle off the end of the bar. */
 .prayer-credit {

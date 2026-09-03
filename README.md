@@ -62,6 +62,11 @@ each line as it is spoken. Two engines sit behind that one button
 | `SpeechEngine` | the block has `speech="xx-XX"` and the device has a voice for it | exact — one utterance per verse, plus word-level from `boundary` events |
 | `FileEngine` | the block has `audio="..."` | needs a `cues` list; without one the recording just plays |
 
+A slider beside the button sets the reading speed (0.5x to 1.25x), shared
+across the book and remembered. A recording changes pace at once; a
+synthesized voice takes the new rate at the next line, since `rate` is fixed
+when the utterance is created.
+
 `speech` takes tags in preference order, so a chapter can ask for an accent:
 Spanish uses `es-CO, es-419, es-MX, es-US`. Voices are then ranked — requested
 region first, a bonus for premium/neural/Google engines, and a heavy penalty

@@ -11,6 +11,8 @@ Most chapters use the voice that your device has for that language. This is why 
 
 Latin is the other exception. Since no browser ships with a Latin voice, that chapter plays a real recording from Wikimedia Commons instead: a spoken reading. However, a recording carries no idea of where one line ends and the next begins, so it plays without following the text line by line.
 
+The slider beside the button sets the reading speed, down to half pace and up to a quarter faster. It applies to every chapter and is remembered between visits, so an unfamiliar script can be followed slowly without asking for it again on each page. A recording changes pace the moment you move it; a synthesized voice picks up the new speed at the start of the next line, because the speed of a spoken line is fixed before it begins.
+
 
 ## The eight chapters
 
