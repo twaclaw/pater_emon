@@ -6,8 +6,9 @@ project:
     - assets/audio/**
 
 book:
-  title: "The Lord's Prayer"
-  subtitle: "One prayer, eight tongues"
+  title: "Πάτερ ἡμῶν"
+  output-file: pater-emon
+  downloads: [pdf]
   date: last-modified
   search: true
   reader-mode: true
@@ -28,6 +29,7 @@ book:
     - chapters/italian.qmd
     - chapters/german.qmd
     - chapters/english.qmd
+    - chapters/ukrainian.qmd
     - chapters/sources.qmd
 
 filters:

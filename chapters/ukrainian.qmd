@@ -1,0 +1,116 @@
+# Ukrainian {#sec-ukrainian}
+
+*Отче наш.* Ukrainian received the prayer through Church Slavonic rather than
+Latin, which is why this chapter sits apart from the western vernaculars
+before it: its ancestor is the [Ancient Greek](ancient-greek.qmd) of the
+Byzantine liturgy, carried north in the tenth century and translated into the
+Slavonic used across the Orthodox world for the next six hundred years.
+
+The transliteration under each line romanises the **sound**, as
+[Modern Greek](modern-greek.qmd) does, not the spelling.
+
+::: {.pdf-keep}
+::: {.callout-note collapse="true"}
+## Pronunciation key
+
+| Letter | Here | Sounds like |
+|---|---|---|
+| г | `h` | *h*ouse — **not** a hard *g* |
+| ґ | `g` | *g*o (rare, a separate letter) |
+| х | `kh` | Scottish lo*ch* |
+| и | `y` | b*i*t, further back |
+| і | `i` | mach*i*ne |
+| ї | `yi` | *ye*ast |
+| є | `ye` | *ye*s |
+| ц | `ts` | ca*ts* |
+| ч, ш | `ch`, `sh` | — |
+| щ | `shch` | fre*sh ch*eese |
+| ь | `'` | softens the consonant before it |
+| ’ | `'` | the apostrophe: keeps the consonant hard |
+
+The letter to watch is **г**. In Ukrainian it is a breathy *h*, not the *g* of
+Russian, so *лукавого* ends "-*voho*" and *сьогодні* begins "*s'oho-*". It is
+the single loudest marker of the language, and getting it wrong is the
+commonest mistake a reader coming from Russian makes.
+:::
+:::
+
+## Liturgical text
+
+The form prayed today, with the doxology attached.
+
+::: {.prayer lang="uk" speech="uk-UA" #uk-liturgical}
+| Отче наш, що єси на небесах!
+| [Otche nash, shcho yesy na nebesakh!]{.tr}
+| Нехай святиться ім'я Твоє,
+| [Nekhay svyatytsya im'ya Tvoye,]{.tr}
+| нехай прийде Царство Твоє,
+| [nekhay pryyde Tsarstvo Tvoye,]{.tr}
+| нехай буде воля Твоя,
+| [nekhay bude volya Tvoya,]{.tr}
+| як на небі, так і на землі.
+| [yak na nebi, tak i na zemli.]{.tr}
+| Хліб наш насущний дай нам сьогодні.
+| [Khlib nash nasushchnyy day nam s'ohodni.]{.tr}
+| І прости нам провини наші, як і ми прощаємо винуватцям нашим.
+| [I prosty nam provyny nashi, yak i my proshchayemo vynuvatsyam nashym.]{.tr}
+| І не введи нас у спокусу, але визволи нас від лукавого.
+| [I ne vvedy nas u spokusu, ale vyzvoly nas vid lukavoho.]{.tr}
+| Бо Твоє є царство, і сила, і слава навіки. Амінь.
+| [Bo Tvoye ye tsarstvo, i syla, i slava naviky. Amin'.]{.tr}
+:::
+
+Unlike the Latin tradition, the doxology is not detachable here. Byzantine
+practice has always joined *Бо Твоє є царство* to the prayer, which is why
+the Orthodox and Greek Catholic text carries it and the
+[Latin](latin.qmd) one never does.
+
+## Ohiyenko's Matthew
+
+Ivan Ohiyenko's translation of the Bible, the standard Ukrainian Protestant
+and academic text, differs in two places that this book has been following
+across languages.
+
+::: {.prayer lang="uk" speech="uk-UA" #uk-ohiyenko .variant}
+| Отче наш, що єси на небесах!
+| [Otche nash, shcho yesy na nebesakh!]{.tr}
+| Нехай святиться Ім'я Твоє,
+| [Nekhay svyatytsya Im'ya Tvoye,]{.tr}
+| нехай прийде Царство Твоє, нехай буде воля Твоя,
+| [nekhay pryyde Tsarstvo Tvoye, nekhay bude volya Tvoya,]{.tr}
+| як на небі, так і на землі.
+| [yak na nebi, tak i na zemli.]{.tr}
+| Хліба нашого насущного дай нам сьогодні.
+| [Khliba nashoho nasushchnoho day nam s'ohodni.]{.tr}
+| І прости нам борги наші, як і ми прощаємо винуватцям нашим.
+| [I prosty nam borhy nashi, yak i my proshchayemo vynuvatsyam nashym.]{.tr}
+| І не введи нас у випробовування, але визволи нас від лукавого.
+| [I ne vvedy nas u vyprobovuvannya, ale vyzvoly nas vid lukavoho.]{.tr}
+| Бо Твоє є царство, і сила, і слава навіки. Амінь.
+| [Bo Tvoye ye tsarstvo, i syla, i slava naviky. Amin'.]{.tr}
+:::
+
+**борги, not провини.** Ohiyenko keeps the debt of the Greek *ὀφειλήματα*
+where the liturgical text has *провини*, faults. This is the same split that
+sent [Spanish](spanish.qmd) to *ofensas* and [English](english.qmd) to
+*trespasses*, while [German](german.qmd) escaped it because *Schuld* means
+both at once.
+
+**випробовування, not спокуса.** "Testing" rather than "temptation" — the
+sixth petition again, answered a third way. [Italian](italian.qmd) changed
+the verb, [Lithuanian](lithuanian.qmd) and [Modern Greek](modern-greek.qmd)
+changed what is asked of God, and Ohiyenko changed the noun: not enticement to
+sin but trial, which is where the [ELLC English](english.qmd) *time of trial*
+also lands.
+
+## Before Ukrainian
+
+The oldest printed ancestor of this text in the East Slavonic world is the
+Ostroh Bible of 1581, in Church Slavonic:
+
+> Ѿче на́шъ иже еси на н[е]б[е]сѣ[хъ], да с[вѧ]ти́тсѧ и́мѧ Твое́ …
+
+Six hundred years of liturgy stand between that line and the one at the top of
+this chapter, and yet *да святиться* and *нехай святиться* are recognisably
+the same request. The square brackets are the modern editors' — the original
+abbreviates the sacred words under a *titlo*, a stroke drawn over the letters.

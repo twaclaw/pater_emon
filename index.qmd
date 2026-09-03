@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-Here's a short exercise in linguistics using a document that has been translated into thousands of languages. This site presents the text of the Lord's Prayer from the Gospels of Matthew and Luke in several languages. It also includes transliterations for the Greek versions and playable audio.
+Here's a short exercise in linguistics using a document that has been translated into thousands of languages. This site presents the text of the Lord's Prayer from the Gospels of Matthew and Luke in several languages. It also includes transliterations for the Greek and Ukrainian versions and playable audio.
 
 
 ## Listening
@@ -9,12 +9,12 @@ Most chapters have a **Listen** button that reads the prayer aloud and highlight
 
 Most chapters use the voice that your device has for that language. This is why the reading follows the text exactly; each line is spoken as its own utterance, so there is nothing to synchronize. If your device has no voice for a language, the button will say so instead of appearing and failing.
 
-Latin is the other exception. Since no browser ships with a Latin voice, that chapter plays a real recording from Wikimedia Commons instead: a spoken reading. However, a recording carries no idea of where one line ends and the next begins, so it plays without following the text line by line.
+Latin is the other exception. Since no browser ships with a Latin voice, that chapter plays a real recording from Wikimedia Commons instead: a spoken reading. A recording carries no idea of where one line ends and the next begins, so this one is given the times of the pauses in the reading, measured from the audio; it follows the text like the rest.
 
 The slider beside the button sets the reading speed, down to half pace and up to a quarter faster. It applies to every chapter and is remembered between visits, so an unfamiliar script can be followed slowly without asking for it again on each page. A recording changes pace the moment you move it; a synthesized voice picks up the new speed at the start of the next line, because the speed of a spoken line is fixed before it begins.
 
 
-## The eight chapters
+## The nine chapters
 
 | Chapter | Text |
 |---|---|
@@ -26,5 +26,6 @@ The slider beside the button sets the reading speed, down to half pace and up to
 | [Italian](chapters/italian.qmd) | The 2020 Missal and the Waldensian text |
 | [German](chapters/german.qmd) | Ecumenical 1968, Luther, Einheitsübersetzung |
 | [English](chapters/english.qmd) | BCP 1662, traditional ecumenical, ELLC 1988 |
+| [Ukrainian](chapters/ukrainian.qmd) | Liturgical text and Ohiyenko's Matthew |
 
 Full provenance for every text is in [Sources](chapters/sources.qmd).

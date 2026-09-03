@@ -1,8 +1,6 @@
 # Ancient Greek {#sec-ancient-greek}
 
-This is the prayer as it survives: Koine Greek, the common language of the
-eastern Mediterranean, in which Matthew's gospel was written. Everything in
-the other chapters is a translation of this.
+This is the prayer as it survives: It is written in Koine Greek, the common language of the eastern Mediterranean in which Matthew's gospel was written. Everything in the other chapters is a translation of this text.
 
 The transliteration under each line is Wikipedia's scholarly romanisation. It
 records the *spelling* rather than any one pronunciation — macrons mark long

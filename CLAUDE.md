@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-A Quarto book of the Lord's Prayer in eight languages, published to GitHub
+A Quarto book of the Lord's Prayer in nine languages, published to GitHub
 Pages, with a print PDF built from the same sources.
 
 ## Layout
@@ -183,14 +183,21 @@ with the drawl instead of staying put and sounding clipped.
 leaves binary float error -- 0.6 comes back as 0.6000000000000001 and is
 stored and echoed that way.
 
-### Do not guess cue timings
+### Cue timings: measure, do not model
 
-Silence detection on a recording finds pauses reliably; mapping them to lines
-is the part that is guesswork. The current spoken Latin gives 8 stable
-segments against a 9-line text, and the obvious mapping implies syllable rates
-between 2.6 and 4.2 per second, which is not tight enough to trust. Shipping
-those numbers would produce visibly wrong highlighting. Cues have to be
-listened to and written down.
+The Latin recording has cues and they were arrived at by measurement, not by
+fitting a curve. Silence detection over frame RMS finds eight pauses that are
+stable across thresholds, which is exactly the number of boundaries nine lines
+need, so each cue is a real silence in the audio rather than an estimate.
+Only the first, a short breath at 3.08s, needs a loose threshold (8 dB over
+the noise floor, 0.10s minimum gap) to show up.
+
+What does **not** work is spreading the lines across the recording in
+proportion to how much text each holds. That was tried, with a slider to
+stretch the fit; the best setting tracked the first seven lines to within
+0.7s and then drifted to **+2.1s** by the last, because a reader does not
+pace by line length. If a future recording needs cues, detect its pauses and
+check the count against the line count before believing anything.
 
 ### Re-encoding recordings
 
@@ -234,10 +241,15 @@ Three things that will bite anyone editing the PDF path:
   load — that was the original PDF build failure. Nothing needs it, because
   the font covers every script.
 - **The font is not decorative.** EB Garamond is the only face in TeX Live
-  covering all 106 non-ASCII characters the chapters use — polytonic Greek,
+  covering the non-ASCII characters the chapters print — polytonic Greek,
   the transliteration diacritics, Lithuanian and Spanish accents. TeX Gyre
   Pagella misses 43 of them. It is also the web book's face. If you change it,
-  check coverage first:
+  check coverage first -- and check it against what actually reaches the PDF,
+  not against the sources. The Ukrainian chapter quotes the Ostroh Bible in
+  Church Slavonic, and `ѧ` and `Ѿ` are outside EB Garamond; that is fine only
+  because the quote sits in commentary, which print drops, and browsers fall
+  back for it on the web. Move that quote into a `.prayer` or `.pdf-keep`
+  block and the PDF loses two characters silently.
 
   ```sh
   uv run --with fonttools python -c "..."   # see git log for the check

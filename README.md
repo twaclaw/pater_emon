@@ -3,8 +3,8 @@
 A Quarto book presenting the Lord's Prayer in several languages with the texts taken from Wikipedia. The order is the
 order of descent: the Koine original, then Modern Greek and Latin, etc.
 
-The Greek chapters print a transliteration in the Latin alphabet beneath each
-line, which a button hides. The preference is remembered across chapters and
+The Greek and Ukrainian chapters print a transliteration in the Latin alphabet
+beneath each line, which a button hides. The preference is remembered across chapters and
 visits.
 
 ## Build

@@ -17,6 +17,7 @@ those same articles.
 | Italian | [Padre nostro](https://it.wikipedia.org/wiki/Padre_nostro) (Italian Wikipedia) |
 | German | [Vaterunser](https://de.wikipedia.org/wiki/Vaterunser) (German Wikipedia) |
 | English | [Lord's Prayer](https://en.wikipedia.org/wiki/Lord%27s_Prayer) (English Wikipedia) |
+| Ukrainian | [Отче наш](https://uk.wikipedia.org/wiki/%D0%9E%D1%82%D1%87%D0%B5_%D0%BD%D0%B0%D1%88) (Ukrainian Wikipedia) |
 
 ## Editorial notes
 
@@ -37,6 +38,16 @@ text, for reference:
 > ἐπιτρέψῃς νὰ ὑποκύψωμε σὲ πειρασμό, ἀλλὰ γλύτωσέ μας ἀπὸ τὸν Πονηρό. Διότι
 > δική σου (καὶ ὄχι τοῦ Πονηροῦ) εἶναι ἡ βασιλικὴ ἐξουσία καὶ ἡ δύναμι καὶ ἡ
 > ἰσχὺς στοὺς αἰῶνες. Ἀμήν.
+
+**Ukrainian transliteration.** Written for this book, romanising the sound
+rather than the spelling. It is not the Ukrainian National system used for
+passports and place names, which writes *г* as `h` but also collapses *и* and
+*і* in ways that hide the difference between them. The scheme used is set out
+in the pronunciation key in that chapter.
+
+**Ukrainian second text.** Ohiyenko's Matthew is quoted from the gospel
+comparison table in the same article, which prints it verse by verse; the
+verse numbers have been dropped and the text broken at the petitions.
 
 **Modern Greek transliteration.** Written for this book. The Greek Wikipedia
 article does not romanise its text, and no standard romanisation targets Modern
@@ -95,9 +106,12 @@ MIDI files of *Pater noster* and *Vater unser* do exist on Commons, but MIDI
 stores notes rather than words — it can carry the chant's melody and never the
 text — so it is no use for reading a prayer aloud.
 
-The recording has no verified cue list, so it does not follow the text line by
-line. The chapters read by a voice do, because they are spoken a line at a
-time.
+The recording carries a cue list, so it follows the text line by line, as the
+chapters read by a voice do. The times were measured rather than estimated:
+silence detection finds eight pauses in the reading, exactly the number of
+boundaries nine lines need, and each is stable across detection thresholds.
+Only the first — a short breath at 3.08s, between *cælis* and *sanctificétur*
+— needs a loose threshold to appear at all.
 
 **Ecclesiastical Latin.** The Latin chapter keeps a respelling of the text —
 *cælis* → *célis*, *tentatiónem* → *tentaziónem* — so that an Italian voice

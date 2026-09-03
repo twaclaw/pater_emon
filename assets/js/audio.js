@@ -348,15 +348,19 @@
     var self = this;
     if (this.cues.length) {
       this.audio.addEventListener("timeupdate", function () {
-        var t = self.audio.currentTime, i = -1;
-        for (var k = 0; k < self.cues.length; k++) {
-          if (t >= self.cues[k]) i = k; else break;
-        }
-        self.hl.verse(i);
+        self.hl.verse(cueIndex(self.cues, self.audio.currentTime));
       });
     } else {
       block.classList.add("no-cues");
     }
+  }
+
+  function cueIndex(cues, t) {
+    var i = -1;
+    for (var k = 0; k < cues.length; k++) {
+      if (t >= cues[k]) i = k; else break;
+    }
+    return i;
   }
 
   /* Without preservesPitch a slowed recording drops in pitch, and a chant
@@ -389,6 +393,7 @@
     this.hl.clear();
     onstate("stopped");
   };
+
 
   // ------------------------------------------------------------------- setup
 
