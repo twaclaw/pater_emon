@@ -113,6 +113,17 @@ boundaries nine lines need, and each is stable across detection thresholds.
 Only the first — a short breath at 3.08s, between *cælis* and *sanctificétur*
 — needs a loose threshold to appear at all.
 
+**Ancient Greek, spoken.** The Greek chapters are read by a Modern Greek
+voice, which is the Orthodox practice: the Koine text is chanted in Greece
+today with modern phonology, not a reconstructed ancient one. But such a voice
+knows only monotonic orthography, and drops a word-initial vowel that carries
+a breathing mark — it reads *ἁγιασθήτω* as "γιασθήτω" and *ἡμῶν* as "μῶν".
+Seventeen of the twenty-one such words in the critical text lost their first
+letter. So the chapter keeps polytonic on the page and hands the synthesiser
+the same words in monotonic orthography. Two long petitions also take a comma
+for phrasing, borrowed from where the 1904 edition punctuates them. No word is
+changed.
+
 **Ecclesiastical Latin.** The Latin chapter keeps a respelling of the text —
 *cælis* → *célis*, *tentatiónem* → *tentaziónem* — so that an Italian voice
 asked to read it produces the ecclesiastical pronunciation; the recording is

@@ -16,18 +16,25 @@ Bible Societies' *Greek New Testament*, which most modern translations follow.
 
 ::: {.prayer lang="grc" speech="el-GR" #grc-na28}
 | πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
+| [πάτερ ημών ο εν τοις ουρανοίς]{.say}
 | [páter hēmôn ho en toîs ouranoîs]{.tr}
 | ἁγιασθήτω τὸ ὄνομά σου
+| [αγιασθήτω το όνομά σου]{.say}
 | [hagiasthḗtō tò ónomá sou]{.tr}
 | ἐλθέτω ἡ βασιλεία σου
+| [ελθέτω η βασιλεία σου]{.say}
 | [elthétō hē basileía sou]{.tr}
 | γενηθήτω τὸ θέλημά σου ὡς ἐν οὐρανῷ καὶ ἐπὶ γῆς
+| [γενηθήτω το θέλημά σου ως εν ουρανώ και επί γης]{.say}
 | [genēthḗtō tò thélēmá sou hōs en ouranô(i) kaì epì gês]{.tr}
 | τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον
+| [τον άρτον ημών τον επιούσιον δος ημίν σήμερον]{.say}
 | [tòn árton hēmôn tòn epioúsion dòs hēmîn sḗmeron]{.tr}
 | καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν ὡς καὶ ἡμεῖς ἀφήκαμεν τοῖς ὀφειλέταις ἡμῶν
+| [και άφες ημίν τα οφειλήματα ημών, ως και ημείς αφήκαμεν τοις οφειλέταις ημών]{.say}
 | [kaì áphes hēmîn tà opheilḗmata hēmôn hōs kaì hēmeîs aphḗkamen toîs opheilétais hēmôn]{.tr}
 | καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ
+| [και μη εισενέγκης ημάς εις πειρασμόν, αλλά ρύσαι ημάς από του πονηρού]{.say}
 | [kaì mḕ eisenénkēis hēmâs eis peirasmón allà rhŷsai hēmâs apò toû ponēroû]{.tr}
 :::
 
@@ -39,18 +46,25 @@ the one older English Bibles were translated from.
 
 ::: {.prayer lang="grc" speech="el-GR" #grc-1904 .variant}
 | Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς,
+| [Πάτερ ημών ο εν τοις ουρανοίς,]{.say}
 | [Páter hēmōn ho en toîs ouranoîs,]{.tr}
 | ἁγιασθήτω τὸ ὄνομά σου·
+| [αγιασθήτω το όνομά σου·]{.say}
 | [hagiasthētō to onomá sou;]{.tr}
 | ἐλθέτω ἡ βασιλεία σου·
+| [ελθέτω η βασιλεία σου·]{.say}
 | [elthétō hē basileía sou;]{.tr}
 | γενηθήτω τὸ θέλημά σου ὡς ἐν οὐρανῷ καὶ ἐπὶ τῆς γῆς.
+| [γενηθήτω το θέλημά σου ως εν ουρανώ και επί της γης.]{.say}
 | [genēthētō to thélēmá sou hōs en ouranōi kaì epì tês gês.]{.tr}
 | τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον,
+| [τον άρτον ημών τον επιούσιον δος ημίν σήμερον,]{.say}
 | [tòn árton hēmōn tòn epioúsion dòs hēmîn sēmeron,]{.tr}
 | καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν, ὡς καὶ ἡμεῖς ἀφίεμεν τοῖς ὀφειλέταις ἡμῶν.
+| [και άφες ημίν τα οφειλήματα ημών, ως και ημείς αφίεμεν τοις οφειλέταις ημών.]{.say}
 | [kaì aphes hēmîn tà opheilēmata hēmōn, hōs kaì hēmeîs aphíemen toîs opheilétais hēmōn.]{.tr}
 | καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ.
+| [και μη εισενέγκης ημάς εις πειρασμόν, αλλά ρύσαι ημάς από του πονηρού.]{.say}
 | [kaì mē eisenénkēis hēmâs eis peirasmón, allà rhŷsai hēmâs apò toû ponēroû.]{.tr}
 :::
 
@@ -61,6 +75,7 @@ appended at the end:
 
 ::: {.prayer lang="grc" speech="el-GR" #grc-doxology .variant}
 | ὅτι σοῦ ἐστιν ἡ βασιλεία καὶ ἡ δύναμις καὶ ἡ δόξα εἰς τοὺς αἰῶνας. ἀμήν.
+| [ότι σου εστιν η βασιλεία και η δύναμις και η δόξα εις τους αιώνας. αμήν.]{.say}
 | [hóti soû estin hē basileía kaì hē dýnamis kaì hē dóxa eis toùs aiônas. amḗn.]{.tr}
 :::
 

@@ -8,7 +8,6 @@ project:
 book:
   title: "Πάτερ ἡμῶν"
   output-file: pater-emon
-  downloads: [pdf]
   date: last-modified
   search: true
   reader-mode: true
@@ -22,7 +21,6 @@ book:
     - index.qmd
     # Source languages first, then the vernaculars they were carried into.
     - chapters/ancient-greek.qmd
-    - chapters/modern-greek.qmd
     - chapters/latin.qmd
     - chapters/lithuanian.qmd
     - chapters/spanish.qmd
